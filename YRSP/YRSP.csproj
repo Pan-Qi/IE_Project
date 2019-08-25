@@ -223,6 +223,8 @@
     <None Include="packages.config" />
     <Content Include="Static\population.csv" />
     <Content Include="Views\Home\Population.cshtml" />
+    <Content Include="Views\Home\Education.cshtml" />
+    <None Include="Properties\PublishProfiles\yrsp-server - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

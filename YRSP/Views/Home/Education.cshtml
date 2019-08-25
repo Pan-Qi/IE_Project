@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Education";
+}
+<h2>@ViewBag.Title.</h2>
+@*<h3>@ViewBag.Message</h3>*@
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+    <section id="Course">
+        <div class="row">
+        </div>
+
+        <section id="FindCourse">
+            <div class="container">
+                <div class="row">
+                    <form id="Course-form" action="http://Google.com" onsubmit="Choice()">
+                        <p>The <strong>Question1</strong> is:</p>
+                        <input type="radio" name="Choice1" value="Yes" checked> Yes<br>
+                        <input type="radio" name="Choice1" value="No"> No<br><br>
+                        @*<input type="submit" value="Continue 1/5" onclick="Choice1();" />*@
+
+                        <p>The <strong>Question2</strong> is:</p>
+                        <input type="radio" name="Choice2" value="Yes" checked> Yes<br>
+                        <input type="radio" name="Choice2" value="No"> No<br><br>
+                        @*<input type="submit" value="Continue 2/5" onclick="Choice2();" />*@
+
+                        <p>The <strong>Question3</strong> is:</p>
+                        <input type="radio" name="Choice3" value="Yes" checked> Yes<br>
+                        <input type="radio" name="Choice3" value="No"> No<br><br>
+                        @*<input type="submit" value="Continue 3/5" onclick="Choice3();" />*@
+
+                        <p>The <strong>Question4</strong> is:</p>
+                        <input type="radio" name="Choice4" value="Yes" checked> Yes<br>
+                        <input type="radio" name="Choice4" value="No"> No<br><br>
+                        @*<input type="submit" value="Continue 4/5" onclick="Choice4();" />*@
+
+                        <p>The <strong>Question5</strong> is:</p>
+                        <input type="radio" name="Choice5" value="Yes" checked> Yes<br>
+                        <input type="radio" name="Choice5" value="No"> No<br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="recommendation" data-stellar-background-ratio="2.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="Course-title" data-wow-delay="0.1s">
+                    <h2>Course Recommendation</h2>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- Course1 -->
+                    <div class="course1" data-wow-delay="0.4s">
+                        <a href="https://www.ames.net.au/learn-english/english-for-youth">
+                            <img src="/Images/youth.jpg" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="https://www.ames.net.au/learn-english/english-for-youth">Youth English</a></h3>
+                            <p><strong>Description:</strong> Youth English is mainly recommended for users from 15 to 23 years old.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- Course2 -->
+                    <div class="course2" data-wow-delay="0.6s">
+                        <a href="https://www.ames.net.au/learn-english/general-english-for-living-in-australia">
+                            <img src="/Images/living.jpg" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="https://www.ames.net.au/learn-english/general-english-for-living-in-australia">English for living in Australia</a></h3>
+                            <p><strong>Description:</strong> Living English is mainly recommended for users who is willing to improve English for daily use.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- Course3 -->
+                    <div class="course3" data-wow-delay="0.8s">
+                        <a href="https://www.ames.net.au/learn-english/english-for-work">
+                            <img src="/Images/working.png" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="https://www.ames.net.au/learn-english/english-for-work">English for working</a></h3>
+                            <p><strong>Description:</strong> working English is mainly recommended for users whose English is not sufficient for working communication.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- Course4 -->
+                    <div class="course4" data-wow-delay="0.8s">
+                        <a href="https://www.ames.net.au/find-a-course/work-skills">
+                            <img src="/Images/working_skill.jpg" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="https://www.ames.net.au/find-a-course/work-skills">Work skills</a></h3>
+                            <p><strong>Description:</strong> Work skill courses is aimed at teaching users skills to make a living.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <!-- Course5 -->
+                    <div class="course5" data-wow-delay="0.8s">
+                        <a href="https://www.ames.net.au/find-a-course/career-development-skills">
+                            <img src="/Images/digital.png" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="https://www.ames.net.au/find-a-course/career-development-skills">Digital literacy</a></h3>
+                            <p><strong>Description:</strong> Digital literacy courses are designed for hobby or making a living.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function Choice() {
+            //document.getElementById("demo").innerHTML = "Choice saved";
+            alert('Choice has been submitted');
+        }
+    </script>
+
+</body>
+
