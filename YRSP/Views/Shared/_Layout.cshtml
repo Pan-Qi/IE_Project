@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - YRSP</title>
+    @*@Scripts.Render("~/bundles/jquery")*@
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/js")
+    @Styles.Render("~/Content/css")
+
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&amp;subset=latin-ext"
+          rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">RF</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Education<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>
+                    </li>
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Employment<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>
+                    </li>*@
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Citizenship<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>
+                    </li>*@
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Life in Melbourne<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>
+                    </li>*@
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Events<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>
+                    </li>*@
+                    <li class="dropdown">
+                        <a href="#">About Us</a>
+                        @*<ul class="dropdown-menu">
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                        </ul>*@
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+    <div>
+        @RenderBody()
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info">
+                            <div class="section-title">
+                                <h2>Headquarter</h2>
+                            </div>
+                            <address>
+                                <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
+                            </address>
+
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+
+                            <div class="copyright-text">
+                                <p>Copyright &copy; @DateTime.Now.Year Rising Phoenix</p>
+
+                                <p>Design: TemplateMo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info">
+                            <div class="section-title">
+                                <h2>Contact Info</h2>
+                            </div>
+                            <address>
+                                <p>+65 2244 1100, +66 1800 1100</p>
+                                <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                            </address>
+
+                            <div class="footer_menu">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Investor</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-info newsletter-form">
+                            <div class="section-title">
+                                <h2>Newsletter Signup</h2>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <form action="#" method="get">
+                                        <input type="email" class="form-control" placeholder="Enter your email" name="email"
+                                               id="email" required="">
+                                        <input type="submit" class="form-control" name="submit" id="form-submit"
+                                               value="Send me">
+                                    </form>
+                                    <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
+
+    <!-- js files -->
+    <!-- js -->
+    <script>
+        function scroll() {
+            var top = $(document).scrollTop();
+            if (top < 400) {
+                document.getElementById('navbar').style.backgroundColor = '';
+            }
+            else {
+                document.getElementById('navbar').style.backgroundColor = 'black';
+            }
+        }
+
+        $(window).on('scroll', function () {
+            scroll()
+        });
+    </script>
+
+    <script>
+        $(window).load(function () {
+            $.fn.lightspeedBox();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 3,
+                lazyLoad: true,
+                autoPlay: true,
+                pagination: true,
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
