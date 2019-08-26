@@ -1,0 +1,319 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- banner section -->
+<section class="banner-w3ls">
+    <!-- <div class="banner-w3l-mk">
+        <div class="logo-w3ls">
+            <a href="index.html">
+                <h1><i class="fa fa-gratipay" aria-hidden="true"></i>Handout</h1>
+            </a>
+        </div>
+    </div> -->
+    <!-- <button id="trigger-overlay" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <div class="overlay overlay-door">
+            <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="scroll">Home</a></li>
+                    <li><a href="#about" class="scroll">About Us</a></li>
+                    <li><a href="#services" class="scroll">Services</a></li>
+                    <li><a href="#features" class="scroll">Features</a></li>
+                    <li><a href="#gallery" class="scroll">Gallery</a></li>
+                    <li><a href="#team" class="scroll">Volunteers</a></li>
+                    <li><a href="#mail" class="scroll">Mail Us</a></li>
+                </ul>
+            </nav>
+        </div> -->
+
+    <div class="pogoSlider" id="js-main-slider">
+        <div class="pogoSlider-slide" data-transition="verticalSlide" data-duration="4000"
+             style="background-image:url(/Images/Refugee.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>Let’s Fully Welcome Refugee</h3>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="4000"
+             style="background-image:url(/Images/ce_education_explosion.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>Education Support</h3>
+                    <p>Get better education, get better future life.</p>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @*<div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
+             style="background-image:url(/Images/banner3.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>We Can Make Smile!</h3>
+                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
+             style="background-image:url(/Images/banner4.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>Education For Every Kid!</h3>
+                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>*@
+    </div><!-- //pogoSlider -->
+
+    <div class="modal fade" id="readmore" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Handout</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img class="img-responsive team-agile" src="/Images/model.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum interdum
+                            aliquet. Nam eleifend ac augue in aliquet. Maecenas ac molestie mi. Nam tincidunt
+                            pretium dolor, eu placerat elit. Duis nec luctus dolor. Ut a diam metus. Aenean
+                            fringilla purus enim, non pharetra eros blandit in. Suspendisse tellus quam, vestibulum
+                            vel urna vitae, sagittis consectetur dui.
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- //modal-content -->
+        </div><!-- //modal-dialog -->
+    </div><!-- //modal -->
+</section>
+<!-- //banner section -->
+<!-- About -->
+<div class="stats" id="about">
+    <div class="container">
+        <h3 class="w3l-title"><span>O</span>ur <span>S</span>urvices</h3>
+        <p>
+            Education support, Career, Become Volunteer, Know Your Rights, Social events
+        </p>
+        <div class="row" style="margin-left: 0; margin-right: 0;">
+            <div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Education support</h4>
+                        <p>Find English learning resources and other courses. Find schools for refugees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Career</h4>
+                        <p>Help you start your career in Victoria!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Become Volunteer</h4>
+                        <p>Want to help refugees in Victoria. Join us!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Know your rights</h4>
+                        <p> Get to know refugee rights in Australia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Social Events</h4>
+                        <p>Participate in upcoming refugee social events.</p>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-sm-4 service-tile">
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Make a donation</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna</p>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+<!-- //About -->
+
+<div class="testimonial">
+    <div class="container">
+        <h3 class="w3l-title"><span>T</span>estimonials</h3>
+        <div class="flipster">
+            <ul>
+                <li>
+                    <div class="agile-testi">
+                        <div class="agile-testi-top">
+                        </div>
+                        <div class="agile-testi-bottom">
+                            <img src="https://via.placeholder.com/75" alt="" />
+                            <h4>Thomson Deo</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
+                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
+                                tellus
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="agile-testi">
+                        <div class="agile-testi-top agile-testi-top1">
+                        </div>
+                        <div class="agile-testi-bottom">
+                            <img src="https://via.placeholder.com/75" alt="" />
+                            <h4>Fonica libero</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
+                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
+                                tellus
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="agile-testi">
+                        <div class="agile-testi-top">
+                        </div>
+                        <div class="agile-testi-bottom">
+                            <img src="https://via.placeholder.com/75" alt="" />
+                            <h4>Michael Doe</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
+                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
+                                tellus
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="agile-testi">
+                        <div class="agile-testi-top">
+                        </div>
+                        <div class="agile-testi-bottom">
+                            <img src="https://via.placeholder.com/75" alt="" />
+                            <h4>Laura Carl</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
+                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
+                                tellus
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="agile-testi">
+                        <div class="agile-testi-top agile-testi-top1">
+                        </div>
+                        <div class="agile-testi-bottom">
+                            <img src="https://via.placeholder.com/75" alt="" />
+                            <h4>Ullam Firose</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
+                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
+                                tellus
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        @*<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>*@
+        @*<script src="js/jquery.flipster.js"></script>*@
+        @Scripts.Render("~/bundles/flipster")
+        <script>
+            $(".flipster").flipster({ style: 'carousel', start: 0 });
+        </script>
+    </div>
+</div>
+
+<!-- About -->
+<div class="stats" id="about">
+    <div class="container">
+        <h3 class="w3l-title"><span>A</span>bout <span>U</span>s</h3>
+        <p>
+            YRSP is represented as Young Refugee Support which is mainly focus on helping new refugees to settle up new good lives in Melbourne.
+        </p>
+        @*<div class="stats-info">
+            <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1200'
+                     data-delay='.5' data-increment="1">1200</div>
+                <h4 class="stats-info">Likes</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='8000'
+                     data-delay='.5' data-increment="1">8000</div>
+                <h4 class="stats-info">Followers</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                <i class="fa fa-linkedin"></i>
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='9060'
+                     data-delay='.5' data-increment="10">9060</div>
+                <h4 class="stats-info">Donations</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='6700'
+                     data-delay='.5' data-increment="1">6700</div>
+                <h4 class="stats-info">Donors</h4>
+            </div>
+            <div class="clearfix"></div>
+        </div>*@
+    </div>
+</div>
+
