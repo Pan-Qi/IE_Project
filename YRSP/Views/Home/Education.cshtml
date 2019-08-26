@@ -1,10 +1,20 @@
 ﻿@{
     ViewBag.Title = "Education";
 }
-<h2>@ViewBag.Title.</h2>
 @*<h3>@ViewBag.Message</h3>*@
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    @*background image don't touch*@
+    <div class="container-fluid" style="height: 600px; background-image: url(https://via.placeholder.com/1920x1080); background-position: center;">
+        <div class="row" style="margin-top: 270px">
+            <div class="col-xs-4 col-xs-offset-4 text-center">@ViewBag.Title</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 text-center"><a class=" btn-default btn" href="#empty">Let's dive in!</a></div>
+        </div>
+        
+    </div>
 
     <section class="preloader">
         <div class="spinner">
@@ -13,7 +23,7 @@
 
         </div>
     </section>
-
+    <div style="height: 50px;" id="empty"></div>
     <section id="Course">
         <div class="row">
         </div>

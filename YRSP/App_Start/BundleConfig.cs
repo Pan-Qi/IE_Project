@@ -23,6 +23,12 @@ namespace YRSP
 
             //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
             //          "~/Scripts/bootstrap.js"));
+            bundles.Add(new ScriptBundle("~/bundles/visual").Include(
+           "~/Scripts/Visualisation/countryOfOriginAS.js",
+           "~/Scripts/Visualisation/countryOfOriginRefugee.js",
+           "~/Scripts/Visualisation/populationChart.js"
+           ));
+
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                 "~/Scripts/bootstrap.js",

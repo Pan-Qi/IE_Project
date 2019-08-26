@@ -198,8 +198,10 @@
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\numscroller-1.0.js" />
     <Content Include="Scripts\owl.carousel.js" />
-    <Content Include="Scripts\population.js" />
     <Content Include="Scripts\SmoothScroll.min.js" />
+    <Content Include="Scripts\Visualisation\countryOfOriginAS.js" />
+    <Content Include="Scripts\Visualisation\countryOfOriginRefugee.js" />
+    <Content Include="Scripts\Visualisation\populationChart.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -225,6 +227,8 @@
     <Content Include="Views\Home\Population.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
     <None Include="Properties\PublishProfiles\yrsp-server - Web Deploy.pubxml" />
+    <Content Include="Static\countryOfOriginAS.csv" />
+    <Content Include="Static\countryOfOriginRefugee.csv" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
