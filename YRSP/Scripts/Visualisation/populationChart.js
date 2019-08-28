@@ -54,7 +54,7 @@ Plotly.d3.csv('/Static/population.csv', function(err, rows){
   };
 
 
-  Plotly.newPlot('populationChart', data, layout);
+  Plotly.newPlot('populationChart', data, layout, {showLink: false, displaylogo: false, responsive: true});
 
 })
 
