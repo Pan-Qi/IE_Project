@@ -29,6 +29,6 @@ Plotly.d3.csv('/Static/countryOfOriginRefugee.csv', function(err, rows){
       }
     };
 
-    Plotly.plot(countryOfOriginRef, data, layout, {showLink: false});
+    Plotly.plot(countryOfOriginRef, data, layout, {showLink: false, displaylogo: false, responsive: true});
 
 });
