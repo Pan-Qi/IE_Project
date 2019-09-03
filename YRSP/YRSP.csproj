@@ -216,6 +216,7 @@
     <None Include="Properties\PublishProfiles\yrsp-server - Web Deploy.pubxml" />
     <Content Include="Static\countryOfOriginAS.csv" />
     <Content Include="Static\countryOfOriginRefugee.csv" />
+    <Content Include="Views\Home\School.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

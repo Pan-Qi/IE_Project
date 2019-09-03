@@ -27,5 +27,11 @@ namespace YRSP.Controllers
             return View();
         }
 
+        public ActionResult School()
+        {
+            //ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

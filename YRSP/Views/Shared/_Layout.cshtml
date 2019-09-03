@@ -15,7 +15,8 @@
     @Scripts.Render("~/bundles/pogo")
     @Scripts.Render("~/bundles/main")
 
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
     <script type="application/x-javascript">
          addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -48,7 +49,7 @@
                            aria-expanded="false" >Education<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="@Url.Action("Education", "Home")">Courses</a></li>
-                            <li><a href="#">School</a></li>
+                            <li><a href="@Url.Action("School", "Home")">School</a></li>
                             @*<li><a href="#">item</a></li>*@
                         </ul>
                     </li>

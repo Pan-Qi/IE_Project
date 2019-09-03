@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "School";
+}
+
+<div class="container-fluid" style="        height: 200px;
+        background-image: url('../../Images/systemic-evaluation.jpg');
+        background-position: center;">
+    
+</div>
+<select id="choices">
+    <option value="0">All School</option>
+    <option value="1">I want IT cources</option>
+    <option value="2">I want introduction cources</option>
+    <option value="3">I want high level cources</option>
+    <option value="4">I'm interested in business</option>
+</select>
+<button id="button">Choose For Me</button>
+<div id='map' style='width: 100%; height: 300px;'></div>
+<div id="result"></div>
+<script src="~/Static/school_data.js"></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicHExMjM0IiwiYSI6ImNqbmJsazA0MjBhazYzcWtnb3cxNmtodm0ifQ.GcpMAuvOieKuI2pjO3bBjg';
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 10,
+        center: [144.96332, -37.814], // Victoria, Australia
+    });
+    var markers;
+    var results = $('#result');
+    $('#button').on('click', () => {
+        let result = [];
+
+        if (markers && markers.length > 0) {
+            for (marker of markers) {
+                marker.remove();
+            }
+        }
+        markers = [];
+        results.html('');
+        switch (document.getElementById('choices').value) {
+            case "0":
+                result = locations;
+                break;
+
+            case "1":
+                for (let uni of locations) {
+                    if (uni.genre === 'IT') {
+                        result.push(uni);
+                    }
+                }
+                break;
+
+            case "2":
+                for (let uni of locations) {
+                    if (uni.level < 3) {
+                        result.push(uni);
+                    }
+                }
+                break;
+
+            case "3":
+                for (let uni of locations) {
+                    if (uni.level >= 3) {
+                        result.push(uni);
+                    }
+                }
+                break;
+
+            case "4":
+                for (let uni of locations) {
+                    if (uni.genre === 'Business') {
+                        result.push(uni);
+                    }
+                }
+
+            default:
+                break;
+        }
+        console.log(result)
+        for (let uni of result) {
+            console.log(uni.intro);
+            results.append('<img src="' + uni.image + '">' + '<div>' + uni.name + '</div>')
+            let marker = new mapboxgl.Marker();
+            let popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML('<h4>' + uni.name + '</h4>' + uni.intro);
+            marker.setLngLat(uni.location)
+                .setPopup(popup)
+                .addTo(map);
+            markers.push(marker);
+        }
+    });
+
+
+</script>
