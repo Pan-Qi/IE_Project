@@ -189,6 +189,7 @@
     <Content Include="Scripts\Visualisation\countryOfOriginAS.js" />
     <Content Include="Scripts\Visualisation\countryOfOriginRefugee.js" />
     <Content Include="Scripts\Visualisation\populationChart.js" />
+    <Content Include="Static\school_data.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
