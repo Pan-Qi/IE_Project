@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -118,9 +117,6 @@
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -149,41 +145,32 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Images\10.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\11.png" />
+    <Content Include="Images\12.png" />
+    <Content Include="Images\13.png" />
+    <Content Include="Images\14.png" />
+    <Content Include="Images\15.png" />
+    <Content Include="Images\16.png" />
+    <Content Include="Images\17.png" />
+    <Content Include="Images\18.png" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
     <Content Include="Images\6.jpg" />
-    <Content Include="Images\7.jpg" />
-    <Content Include="Images\8.jpg" />
-    <Content Include="Images\9.jpg" />
-    <Content Include="Images\ab.jpg" />
-    <Content Include="Images\ab2.jpg" />
-    <Content Include="Images\banner1.jpg" />
-    <Content Include="Images\banner2.jpg" />
-    <Content Include="Images\banner3.jpg" />
-    <Content Include="Images\banner4.jpg" />
-    <Content Include="Images\bg.jpg" />
-    <Content Include="Images\f1.jpg" />
-    <Content Include="Images\f2.jpg" />
-    <Content Include="Images\f3.jpg" />
-    <Content Include="Images\f4.jpg" />
-    <Content Include="Images\f5.jpg" />
-    <Content Include="Images\f6.jpg" />
-    <Content Include="Images\f7.jpg" />
-    <Content Include="Images\fo1.jpg" />
-    <Content Include="Images\fo2.jpg" />
-    <Content Include="Images\fo3.jpg" />
-    <Content Include="Images\fo4.jpg" />
-    <Content Include="Images\fo5.jpg" />
-    <Content Include="Images\fo6.jpg" />
-    <Content Include="Images\model.jpg" />
-    <Content Include="Images\t1.jpg" />
-    <Content Include="Images\t2.jpg" />
-    <Content Include="Images\t3.jpg" />
-    <Content Include="Images\t4.jpg" />
-    <Content Include="Images\team_logo.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\ce_education_explosion.jpg" />
+    <Content Include="Images\digital.png" />
+    <Content Include="Images\education.jpg" />
+    <Content Include="Images\inflatable-refugee-by-schellekens-peleman-11-1200x520.jpg" />
+    <Content Include="Images\inflatable-refugee-sculpture-01.jpg" />
+    <Content Include="Images\living.jpg" />
+    <Content Include="Images\Refugee.jpg" />
+    <Content Include="Images\systemic-evaluation.jpg" />
+    <Content Include="Images\working.png" />
+    <Content Include="Images\working_skill.jpg" />
+    <Content Include="Images\youth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\classie.js" />
     <Content Include="Scripts\demo1.js" />
@@ -258,12 +245,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
