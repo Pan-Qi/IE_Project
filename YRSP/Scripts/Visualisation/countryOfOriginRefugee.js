@@ -1,4 +1,4 @@
-Plotly.d3.csv('countryOfOriginRefugee.csv', function(err, rows){
+Plotly.d3.csv('/Static/countryOfOriginRefugee.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
