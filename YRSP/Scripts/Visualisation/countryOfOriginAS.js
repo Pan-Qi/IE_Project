@@ -1,4 +1,4 @@
-Plotly.d3.csv('/Static/countryOfOriginAS.csv', function(err, rows){
+Plotly.d3.csv('countryOfOriginAS.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
@@ -21,14 +21,27 @@ Plotly.d3.csv('/Static/countryOfOriginAS.csv', function(err, rows){
     }];
 
     var layout = {
-      title: 'Country of origin of asylum seekers <br> in Australia',
+      margin: {
+        l: 64,
+        r: 64,
+        b: 64,
+        t: 64,
+        pad: 4
+      }, 
+        title: {
+        text:'<b>Number of asylum seekers by their country of origin</b>',
+        font: {
+          size: 18
+        }
+        },    
       geo: {
           projection: {
               type: 'robinson'
           }
-      }
+      },
+     paper_bgcolor: '#eeeeee'
     };
 
-    Plotly.plot(countryOfOriginAS, data, layout, {showLink: false});
+    Plotly.plot(countryOfOriginAS, data, layout, {showLink: false, displaylogo: false, responsive: true});
 
 });
