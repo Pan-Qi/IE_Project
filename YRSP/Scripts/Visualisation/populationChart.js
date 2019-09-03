@@ -1,22 +1,9 @@
-Plotly.d3.csv('/Static/population.csv', function(err, rows){
+Plotly.d3.csv('population.csv', function(err, rows){
   function unpack(rows, key) {
     return rows.map(function(row) {return row[key]; });
   }
 
   var trace1 = {
-    type: "scatter",
-    mode: "lines+markers",
-    name: "Persons of Concern",
-    x: unpack(rows, 'date'),
-    y: unpack(rows, 'persons_of_concern'),
-    line: {
-      color: '#FF8700',
-      width: 3
-      
-    }
-  }
-
-  var trace2 = {
     type: "scatter",
     mode: "lines+markers",
     name: "Refugees",
@@ -28,7 +15,7 @@ Plotly.d3.csv('/Static/population.csv', function(err, rows){
     }
   }
 
-  var trace3 = {
+  var trace2 = {
     type: "scatter",
     mode: "lines+markers",
     name: "Asylum Seekers",
@@ -40,21 +27,27 @@ Plotly.d3.csv('/Static/population.csv', function(err, rows){
     }
   }
 
-  var data = [trace1, trace2, trace3];
+  var data = [trace1, trace2];
 
   var layout = {
-   title: 'Population of refugees and asylum seekers in Australia',
+        title: {
+        text:'<b>Population of refugees and asylum seekers in Australia</b>',
+        font: {
+          size: 18
+        }
+        },
     yaxis: {
     title: 'Population'
     },
     xaxis: {
     title: 'Year'
     },
-      
+    paper_bgcolor: '#eeeeee'
   };
 
 
-  Plotly.newPlot('populationChart', data, layout);
+  Plotly.newPlot('populationChart', data, layout, {showLink: false, displaylogo: false, responsive: true});
 
 })
+
 
