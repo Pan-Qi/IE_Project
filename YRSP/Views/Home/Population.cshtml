@@ -27,26 +27,29 @@
 
 </div>
 <div style="height: 50px;" id="empty"></div>
-<h2 style="color:blue;">Refugee Statistics</h2>
-<p> This page introduces some key statistics about refugees and asylum seekers in Australia.</p>
-<h3 style="color:blue;"> Number of refugees and asylum seekers in Australia</h3>
-<p>Let's start with the population of refugees in Australia. The source of data for the population of refugees is from <a href="http://popstats.unhcr.org/en/overview">UNHCR - The UN Refugee Agency</a>.The UNHCR uses the term "persons of concern" to include refugees, returned refugees, asylum seekers, internally displaced persons, stateless persons and others of concern. The definition of each of the terms used by the UNHCR can be read on the <a href="http://popstats.unhcr.org/en/overview">data source link</a>. Below is a plot showing the population of refugees, asylum seekers, and persons of concern in Australia over the last 10 years. UNHCR's figures for asylum-seekers are based on the number of applications lodged for protection visas in Australia.</p>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="visualisationPage" style="font-family:Times New Roman, Arial; margin:25px">
+<h1 style="color:blue;">Refugee Statistics</h1>
+<p font-size: 16px> This page introduces some key statistics about refugees and asylum seekers in Australia.</p> 
+<h2 style="color:blue;"> Number of refugees and asylum seekers in Australia</h2>
+<p style="font-size: 16px"> The below graph shows the population of refugees and asylum seekers in Australia over the last 10 years.The source of data is from <a href="http://popstats.unhcr.org/en/overview">UNHCR - The UN Refugee Agency</a>. UNHCR's figures for asylum seekers are based on the number of applications lodged for protection visas in Australia.</p>
 <div id="populationChart"></div>
-@*<script type="text/javascript" src="populationChart.js"></script>*@
-<i>Note the chart is interactive, hover your mouse inside the chart to see the exact population numbers for a year. Click on a category in the legend to delete it. Play around with many more interactions.</i>
+<script type="text/javascript" src="populationChart.js"></script>
+<i style="font-size: 16px">Note the chart is interactive, hover your mouse inside the chart to see the exact population numbers for a year. Click on a category in the legend to delete it. Play around with many more interactions.</i>
 <br>
-<p>From the above plot, we can see that the number of refugees and asylum seekers in Australia has increased significantly in the last 10 years. The number of refugees have almost tripled in the last 10 years, increasing from 21k in 2008 to 57k in 2018. The number of asylum seekers have increased by more than 30 times from 2k in 2008 to 61k in 2018.</p>
-<h3 style="color:blue;"> Country of Origin of refugees and asylum seekers</h3>
-<p>Now, let us see the distribution of refugees in Australia by their country of origin. The data source for this chart is again <a href="http://popstats.unhcr.org/en/overview">UNHCR - The UN Refugee Agency</a>. The distribution of refugees by country of origin in the year 2017 is shown in the below map.</p>
+<p style="font-size: 16px">The number of refugees and asylum seekers in Australia has increased significantly in the last 10 years. The number of refugees have almost tripled in the last 10 years, increasing from 21k in 2008 to 57k in 2018. The number of asylum seekers have increased by more than 30 times from 2k in 2008 to 61k in 2018.</p>
+<h2 style="color:blue;"> Country of Origin of refugees in Australia</h2>
+<p style="font-size: 16px"> The number of refugees in Australia from each country for the year 2017 is shown in the below map. The data source for this chart is again <a href="http://popstats.unhcr.org/en/overview">UNHCR - The UN Refugee Agency</a>.</p>
 <div id="countryOfOriginRef"></div>
-@*<script type="text/javascript" src="countryOfOriginRefugee.js"></script>*@
-<i>Note the map is interactive, hover your mouse inside the map to see the exact number of refugees from a country. You can pan and zoom in the map.</i><br>
-<p> Based on the above plot that uses the 2017 data, we can see that refugees hail mostly from middle-eastern countries of Afghanistan, Iran and Iraq. Sri Lanka and Pakistan are also in top 5 countries of origin of refugees in Australia. Other common countries of origin for refugees are China and the African countries: Egypt, Libya and Zimbabwe</p>
-<p>Similarly, let us see the distribution of asylum seekers in Australia by their country of origin from the same  <a href="http://popstats.unhcr.org/en/overview">data source</a>. The distribution of asylum seekers by country of origin in the year 2017 is shown in the below map.</p>
+<script type="text/javascript" src="countryOfOriginRefugee.js"></script>
+<i style="font-size: 16px">Note the map is interactive, hover your mouse inside the map to see the exact number of refugees from a country. You can pan and zoom in the map.</i><br>
+<p style="font-size: 16px"> As per 2017 data from UNHCR, refugees hail mostly from middle-eastern countries of Afghanistan, Iran and Iraq. Sri Lanka and Pakistan are also in top 5 countries of origin of refugees in Australia. Other common countries of origin for refugees are China and the African countries: Egypt, Libya and Zimbabwe</p>
+<h2 style="color:blue;"> Country of Origin of asylum seekers in Australia</h2>
+<p style="font-size: 16px">Similarly, the below map shows the number of asylum seekers in Australia from each country for the year 2017 using the same <a href="http://popstats.unhcr.org/en/overview">data source</a>.</p>
 <div id="countryOfOriginAS"></div>
-@*<script type="text/javascript" src="countryOfOriginAS.js"></script>*@
-<i>Note the map is interactive, hover your mouse inside the map to see the exact number of asylum seekers from a country. You can pan and zoom in the map.</i><br>
-<p> Malaysia is the top country of origin for asylum seekers in Australia, followed closely by China. Other common countries of origin for asylum seekers include Afghanistan, middle-eastern countries of Iran and Iraq, Vietnam and sub-continent countries of Pakistan, Sri Lanka, India and Bangladesh.</p>
-
+<script type="text/javascript" src="countryOfOriginAS.js"></script>
+<i style="font-size: 16px">Note the map is interactive, hover your mouse inside the map to see the exact number of asylum seekers from a country. You can pan and zoom in the map.</i><br>
+<p style="font-size: 16px"> Malaysia is the top country of origin for asylum seekers in Australia, followed closely by China. Other common countries of origin for asylum seekers include Afghanistan, middle-eastern countries of Iran and Iraq, Vietnam and sub-continent countries of Pakistan, Sri Lanka, India and Bangladesh.</p>
+</div>
 @*</body>*@
 @*</html>*@
