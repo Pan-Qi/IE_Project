@@ -125,11 +125,31 @@
             <div class="col-sm-4 service-tile">
                 <div class="tile-background">
                     <div class="tile-content">
-                        <h4><a href="@Url.Action("Education", "Home")">Education support</a></h4>
+                        <h4><a href="####" data-toggle="modal" data-target="#myModal">Education support</a></h4>
                         <p>Find English learning resources & other courses.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><b>Select Education</b></h4>
+                        </div>
+                        <div class="modal-body">
+                            Make your selection about what you are interested in:
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-primary" href="@Url.Action("Education", "Home")" role="button">Course</a>
+                            <a class="btn btn-primary" href="@Url.Action("School", "Home")" role="button">School</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-sm-4 service-tile">
                 <div class="tile-background">
                     <div class="tile-content">

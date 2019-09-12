@@ -24,10 +24,10 @@ input[type="button"],input[type="submit"]{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-h1,h2,h3,h4,h5,h6{
-	margin:0;	
-	padding:0;
-	font-family: 'Lobster', cursive;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial Black", Gadget, sans-serif;
 }	
 p{
 	margin:0;
@@ -2250,7 +2250,7 @@ a.w3_agile_vimeo:hover{
 }
 
 .tile-background {
-    background: url(https://via.placeholder.com/300x300) no-repeat center;
+    background: url('../Images/content-block4.jpg') no-repeat center;
     height: 100%;
     padding: 20px;
     background-size: cover;

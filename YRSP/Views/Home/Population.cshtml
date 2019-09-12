@@ -1,8 +1,4 @@
-﻿@{
-    ViewBag.Title = "Background Information";
-}
-
-@*@{
+﻿@*@{
         Layout = null;
     }*@
 <!-- line chart for population of refugees and asylum seekers -->
@@ -14,22 +10,17 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 @Scripts.Render("~/bundles/visual")
 
-@*background image don't touch*@
-<div class="container-fluid" style="        height: 600px;
-        background-image: url('../../Images/1.jpg');
+<div class="container-fluid" style="        height: 200px; width:auto;
+        background-image: url('../../Images/pixpoetry-Hkw1erBrzwc-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;">
-    <div class="row" style="margin-top: 270px">
-        <div class="col-xs-4 col-xs-offset-4 text-center">@ViewBag.Title</div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-4 text-center"><a class=" btn-default btn" href="#empty">Let's dive in!</a></div>
-    </div>
 
 </div>
 <div style="height: 50px;" id="empty"></div>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <div id="visualisationPage" style="font-family:Times New Roman, Arial; margin:25px">
-<h1 style="color:blue;">Refugee Statistics</h1>
+<h1 style="color:black;">Refugee Statistics</h1>
 <p font-size: 16px> This page introduces some key statistics about refugees and asylum seekers in Australia.</p> 
 <h2 style="color:blue;"> Number of refugees and asylum seekers in Australia</h2>
 <p style="font-size: 16px"> The below graph shows the population of refugees and asylum seekers in Australia over the last 10 years.The source of data is from <a href="http://popstats.unhcr.org/en/overview">UNHCR - The UN Refugee Agency</a>. UNHCR's figures for asylum seekers are based on the number of applications lodged for protection visas in Australia.</p>
