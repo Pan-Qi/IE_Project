@@ -2338,7 +2338,7 @@ a.w3_agile_vimeo:hover{
 }
 
 #jumbotron-button {
-    padding: 10px 30px;;
+    padding: 10px 30px;
     background: #2f8eff;
     transition: 0.5s;
     color: white;
@@ -2355,7 +2355,10 @@ a.w3_agile_vimeo:hover{
     transition: 0.5s;
 }
 
-    #hand:hover {
-        color: #F87900;
-    }
+#hand:hover {
+    color: #F87900;
+}
 
+#list {
+    z-index: 3;
+}

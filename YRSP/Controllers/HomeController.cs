@@ -33,5 +33,10 @@ namespace YRSP.Controllers
 
             return View();
         }
+
+        public ActionResult Events()
+        {
+            return View();
+        }
     }
 }
