@@ -1,7 +1,101 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 20%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<div class="container-fluid" style="        height: 200px;
+        background-image: url('../../Images/about07.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+    <div class="content">
+        
+    </div>
+</div>
+
+    @*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <p>YRSP helps young refugees and their families settle well in Victoria.</p>*@
+
+<body>
+    <div class="container-fluid" style="height: auto;
+        background-image: url('../../Images/Aboutback.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+        <div class="stats" id="about">
+            <div class="container">
+                <h3 class="w3l-title"><span>A</span>bout <span>U</span>s</h3>
+                <p>
+                    Young Refugee Support Program (YRSP) is created by a team called
+                    “Phoenix Refugee Help” for young refugees in Victoria. YRSP is a
+                    one-stop, comprehensive website that houses the resources and
+                    information young refugees need to build successful lives for
+                    themselves and their families in the Victoria.
+                </p>
+
+                <h3 class="w3l-title"><span>O</span>ur <span>M</span>ission</h3>
+                <p>
+                    The mission of YRSP is help young refugees and their families
+                    settle well in Victoria. We care about the challenges that the
+                    young refugees are face as they arrived in Australia and we are
+                    committed to provide supports about education, career, daily life
+                    in Victoria and social events. YRSP hope to facilitate young
+                    refugees to integrate into local society and live better in Victoria.
+                </p>
+
+                <h3 class="w3l-title"><span>W</span>hat <span>C</span>an <span>W</span>e <span>H</span>elp</h3>
+                <p>
+                    •	Guide to various free courses<br />
+                    •	Help to find a suitable school for refugee<br />
+                    •	Learn working skills<br />
+                    •	Help to find a job<br />
+                    •	Know refugee's rights<br />
+                    •	Know more about the life in Victoria<br />
+                    •	Connect with local communities<br />
+                    •	Provide the information about social events<br />
+                    •	Help become a volunteer<br />
+                </p>
+
+                <h3 class="w3l-title"><span>T</span>eam <span>M</span>embers</h3>
+                <div class="row">
+                    <div class="column">
+                        <img src="~/Images/Pan.jpg" alt="Pan" style="width:100%; height:auto">
+                    </div>
+                    <div class="column">
+                        <img src="~/Images/Sakshi.jpg" alt="Sakshi" style="width:100%; height:auto">
+                    </div>
+                    <div class="column">
+                        <img src="~/Images/Li.jpg" alt="Li" style="width:100%; height:auto">
+                    </div>
+                    <div class="column">
+                        <img src="~/Images/Saahil.jpg" alt="Saahil" style="width:100%; height:auto">
+                    </div>
+                    <div class="column">
+                        <img src="~/Images/Lou.jpg" alt="Lou" style="width:100%; height:auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

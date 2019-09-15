@@ -8,6 +8,7 @@
         background-position: center;">
     
 </div>
+
 <select id="choices">
     <option value="0">All School</option>
     <option value="1">I want IT cources</option>
@@ -15,9 +16,15 @@
     <option value="3">I want high level cources</option>
     <option value="4">I'm interested in business</option>
 </select>
+
 <button id="button">Choose For Me</button>
-<div id='map' style='width: 100%; height: 300px;'></div>
+
+<div class="row">
+    <div id='map' style='width: 80%; height: 800px;'></div>
+
+</div>
 <div id="result"></div>
+
 <script src="~/Static/school_data.js"></script>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicHExMjM0IiwiYSI6ImNqbmJsazA0MjBhazYzcWtnb3cxNmtodm0ifQ.GcpMAuvOieKuI2pjO3bBjg';
