@@ -1,20 +1,18 @@
-﻿
+﻿@Scripts.Render("~/Bundles/schools")
 @{
     ViewBag.Title = "School";
 }
-
 <div class="container-fluid" style="        height: 200px;
         background-image: url('../../Images/systemic-evaluation.jpg');
         background-position: center;">
-    
-</div>
 
+</div>
 <div style="position: relative;">
     <div id='map' style='width: 100%; height: 400px;'></div>
     <ul id="list" class="list-group" style="width:30vw; max-height: 400px; overflow-y: auto; background: white; position:absolute; top: 0; left: 0;"></ul>
 </div>
 <div id="result"></div>
-<script src="~/Static/vic_school_locations_2019_resp_merged_v1.js"></script>
+@*<script src="/Static/vic_school_locations_2019_resp_merged_v1.js"></script>*@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
 <script>
@@ -58,7 +56,7 @@
     }));
 
     var userMarker = new mapboxgl.Marker();
-    
+
     map.on('click', (e) => {
         userPopUp.setLngLat(e.lngLat).addTo(map);
         userPopUp.setHTML(`<label for="type">School Type:</label>
@@ -102,7 +100,7 @@
         }
 
         filteredSchools.sort((a, b) => (Number(a.distance) > Number(b.distance) ? 1 : -1));
-        
+
         for (let school of filteredSchools) {
             let marker = new mapboxgl.Marker();
             let popup = new mapboxgl.Popup({ offset: 25 })
@@ -141,6 +139,6 @@
         return dis * 6378137;
 
         function toRadians(d) { return (d * Math.PI / 180); }
-    } 
+    }
 
 </script>

@@ -70,6 +70,10 @@ namespace YRSP
                 "~/Scripts/fullcalendar/list/main.min.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/Bundles/schools").Include(
+                "~/Scripts/school_data.js"
+                ));
+
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //          "~/Content/bootstrap.css",
             //          "~/Content/site.css"));
@@ -85,7 +89,7 @@ namespace YRSP
                 "~/Content/style.css"
                 ));
 
-            bundles.Add(new StyleBundle("~/Content/fullcalendar").Include(
+            bundles.Add(new StyleBundle("~/Bundles/fullcalendarcss").Include(
                 "~/Content/fullcalendar/core/main.min.css",
                 "~/Content/fullcalendar/daygrid/main.min.css",
                 "~/Content/fullcalendar/list/main.min.css"

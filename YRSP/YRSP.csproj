@@ -194,12 +194,12 @@
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\numscroller-1.0.js" />
     <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\school_data.js" />
     <Content Include="Scripts\SmoothScroll.min.js" />
     <Content Include="Scripts\Visualisation\countryOfOriginAS.js" />
     <Content Include="Scripts\Visualisation\countryOfOriginRefugee.js" />
     <Content Include="Scripts\Visualisation\populationChart.js" />
     <Content Include="Static\events.js" />
-    <Content Include="Static\school_data.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
