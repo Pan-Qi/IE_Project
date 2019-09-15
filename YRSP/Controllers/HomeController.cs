@@ -22,14 +22,21 @@ namespace YRSP.Controllers
 
         public ActionResult Education()
         {
-            //ViewBag.Message = "Your contact page.";
+            //ViewBag.Message = "Your Education page.";
 
             return View();
         }
 
         public ActionResult School()
         {
-            //ViewBag.Message = "Your contact page.";
+            //ViewBag.Message = "Your School page.";
+
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            //ViewBag.Message = "Your Abour us page.";
 
             return View();
         }
