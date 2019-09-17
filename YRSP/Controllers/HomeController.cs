@@ -45,5 +45,15 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult Career()
+        {
+            return View();
+        }
+
+        public ActionResult Skill()
+        {
+            return View();
+        }
     }
 }

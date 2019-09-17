@@ -150,6 +150,9 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Images\about07.jpg" />
     <Content Include="Images\Aboutback.jpg" />
+    <Content Include="Images\career_background_small.png" />
+    <Content Include="Images\cb.png" />
+    <Content Include="Images\cb2.png" />
     <Content Include="Images\content-block4.jpg" />
     <Content Include="Images\digital.jpg" />
     <Content Include="Images\digital.png" />
@@ -160,6 +163,7 @@
     <Content Include="Images\education4.jpg" />
     <Content Include="Images\education5.jpg" />
     <Content Include="Images\English.jpg" />
+    <Content Include="Images\find_job.jpg" />
     <Content Include="Images\health.jpg" />
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
@@ -171,7 +175,13 @@
     <Content Include="Images\Refugee.jpg" />
     <Content Include="Images\Saahil.jpg" />
     <Content Include="Images\Sakshi.jpg" />
+    <Content Include="Images\skill.jpg" />
+    <Content Include="Images\skill1.png" />
+    <Content Include="Images\skill2.png" />
+    <Content Include="Images\skill3.png" />
+    <Content Include="Images\skill_bc.png" />
     <Content Include="Images\systemic-evaluation.jpg" />
+    <Content Include="Images\working rights.png" />
     <Content Include="Images\working.jpg" />
     <Content Include="Images\working.png" />
     <Content Include="Images\business.jpg" />
@@ -229,6 +239,8 @@
     <Content Include="Static\countryOfOriginRefugee.csv" />
     <Content Include="Views\Home\School.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
+    <Content Include="Views\Home\Career.cshtml" />
+    <Content Include="Views\Home\Skill.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
