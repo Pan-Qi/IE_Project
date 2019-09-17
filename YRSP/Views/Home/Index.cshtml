@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <!-- banner section -->
 <section class="banner-w3ls">
     <!-- <div class="banner-w3l-mk">
@@ -26,7 +25,7 @@
                 </ul>
             </nav>
         </div> -->
-    <div class="jumbotron" style="background:url(/Images/Refugee.jpg) no-repeat center center; background-size: cover">
+    <div class="jumbotron" style="background:url(/Images/main1.jpg) no-repeat center center; background-size: cover">
         <div class="container" style="text-align: center">
             <h3 style="font-size: 4em; margin-top: 30vh; color: white;">Young Refugee Support Project (YRSP)</h3>
             <p style="color: white;">
@@ -34,14 +33,13 @@
                 to build successful lives for themselves and their families in the Victoria.
             </p>
             <ul class="banner-agileits">
-                <li><a href="@Url.Action("Population", "Home")" id="jumbotron-button">know More</a></li>
+                <li><a href="@Url.Action("Population", "Home")" id="jumbotron-button">About Us</a></li>
             </ul>
             <a href="#about" class="btn btn-circle scroll" id="hand">
-                <i  class="fa fa-hand-o-down" aria-hidden="true"></i>
+                <i class="fa fa-hand-o-down" aria-hidden="true"></i>
             </a>
         </div>
     </div>
-
 
     @*<div class="pogoSlider" id="js-main-slider">
         <div class="pogoSlider-slide" data-transition="verticalSlide" data-duration="4000"
@@ -80,48 +78,46 @@
                 </div>
             </div>
         </div>*@
-        @*<div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
-                 style="background-image:url(/Images/banner3.jpg);">
-                <div class="pogoSlider-slide-element">
-                    <div class="container">
-                        <h3>We Can Make Smile!</h3>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                        <ul class="banner-agileits">
-                            <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
-                            <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
-                        </ul>
-                        <a href="#about" class="btn btn-circle scroll">
-                            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
-                        </a>
-                    </div>
+    @*<div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
+             style="background-image:url(/Images/banner3.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>We Can Make Smile!</h3>
+                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
-            <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
-                 style="background-image:url(/Images/banner4.jpg);">
-                <div class="pogoSlider-slide-element">
-                    <div class="container">
-                        <h3>Education For Every Kid!</h3>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                        <ul class="banner-agileits">
-                            <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
-                            <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
-                        </ul>
-                        <a href="#about" class="btn btn-circle scroll">
-                            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
-                        </a>
-                    </div>
+        </div>
+        <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"
+             style="background-image:url(/Images/banner4.jpg);">
+            <div class="pogoSlider-slide-element">
+                <div class="container">
+                    <h3>Education For Every Kid!</h3>
+                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <ul class="banner-agileits">
+                        <li><a href="@Url.Action("Population", "Home")" class="link-w3l1" data-toggle="modal">Read More</a></li>
+                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                    </ul>
+                    <a href="#about" class="btn btn-circle scroll">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </a>
                 </div>
-            </div>*@
+            </div>
+        </div>*@
     @*</div>*@
 </section>
-
 <div class="stats" id="about">
     <div class="container">
         <h3 class="w3l-title"><span>O</span>ur <span>S</span>ervices</h3>
         <p>
-            We’ll look at young refugees’ needs and may be able to give support, this could 
-            include help with: Education support, Career, Become Volunteer, Life in Victoria, 
-            Social events.
+            Our support services help to address the needs of refugees in Victoria.
+            Our services include: Education support, Career services, Become A Volunteer, Life in Victoria, Social events.
         </p>
         <div class="row" style="margin-left: 0; margin-right: 0;">
             <div class="col-sm-4 service-tile">
@@ -132,7 +128,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
@@ -142,7 +137,7 @@
                             <h4 class="modal-title" id="myModalLabel"><b>Education support</b></h4>
                         </div>
                         <div class="modal-body">
-                            We provide services for guiding you to access free courses and help you find out what schools 
+                            We provide services for guiding you to access free courses and help you find out what schools
                             are suitable for refugees. Please make your selection about what you are interested in:
                         </div>
                         <div class="modal-footer">
@@ -152,7 +147,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-sm-4 service-tile">
                 <div class="tile-background">
                     <div class="tile-content">
@@ -198,4 +192,3 @@
         </div>
     </div>
 </div>
-
