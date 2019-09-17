@@ -4,6 +4,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 /*-- reset code --*/
+html {
+    scroll-behavior: smooth;
+}
 body{
 	padding:0;
 	margin:0;

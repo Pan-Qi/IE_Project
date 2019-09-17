@@ -148,8 +148,10 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Images\0.png" />
     <Content Include="Images\about07.jpg" />
     <Content Include="Images\Aboutback.jpg" />
+    <Content Include="Images\career.png" />
     <Content Include="Images\career_background_small.png" />
     <Content Include="Images\cb.png" />
     <Content Include="Images\cb2.png" />
@@ -181,6 +183,7 @@
     <Content Include="Images\skill3.png" />
     <Content Include="Images\skill_bc.png" />
     <Content Include="Images\systemic-evaluation.jpg" />
+    <Content Include="Images\tou.jpg" />
     <Content Include="Images\working rights.png" />
     <Content Include="Images\working.jpg" />
     <Content Include="Images\working.png" />
