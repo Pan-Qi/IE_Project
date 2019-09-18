@@ -172,6 +172,7 @@
     <Content Include="Images\health.jpg" />
     <Content Include="Images\jobse.png" />
     <Content Include="Images\jobse2.png" />
+    <Content Include="Images\job_process.png" />
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
@@ -179,6 +180,7 @@
     <Content Include="Images\perry-grone-lbLgFFlADrY-unsplash.jpg" />
     <Content Include="Images\pixpoetry-Hkw1erBrzwc-unsplash.jpg" />
     <Content Include="Images\population.jpg" />
+    <Content Include="Images\prepare_interview.jpg" />
     <Content Include="Images\Refugee.jpg" />
     <Content Include="Images\right.png" />
     <Content Include="Images\Saahil.jpg" />
