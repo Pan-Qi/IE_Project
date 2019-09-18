@@ -168,6 +168,8 @@
     <Content Include="Images\find.jpg" />
     <Content Include="Images\find_job.jpg" />
     <Content Include="Images\health.jpg" />
+    <Content Include="Images\jobse.png" />
+    <Content Include="Images\jobse2.png" />
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
