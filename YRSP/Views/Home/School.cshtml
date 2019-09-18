@@ -6,7 +6,34 @@
         background-image: url('../../Images/school5.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;" ">
+        background-size: cover;" >
+</div>
+<div class="container" style="font-size: 1.2em;">
+    <h3>Select the best school that fits you<br />Or click on the map to rank schools by distance to your location.</h3>
+
+    <div class="row text-center" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="col-xs-3">
+            <label for="type">School Type:</label>
+            <select id="type-top">
+                <option value="All">All</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <label for="sector">Education Sector:</label>
+            <select id="sector-top">
+                <option value="All">All</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <label for="resp">Refugee Suport Project:</label>
+            <select id="resp-top">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="col-xs-3"><button class="choosebutton" onclick="getSchoolsTop()">Choose For Me</button></div>
+        
+    </div>
 </div>
 <div style="position: relative;">
     <div id='map' style='width: 100%; height: 400px;'></div>
@@ -21,10 +48,10 @@
     let types = new Set(schools.map(i => i.School_Type));
     let sectors = new Set(schools.map(i => i.Education_Sector));
     for (let type of types) {
-        $('#type').append(new Option(type, type));
+        $('#type-top').append(new Option(type, type));
     }
     for (let sector of sectors) {
-        $('#sector').append(new Option(sector, sector));
+        $('#sector-top').append(new Option(sector, sector));
     }
 
     mapboxgl.accessToken = 'pk.eyJ1IjoicHExMjM0IiwiYSI6ImNqbmJsazA0MjBhazYzcWtnb3cxNmtodm0ifQ.GcpMAuvOieKuI2pjO3bBjg';
@@ -119,6 +146,46 @@
             list.append(`<li class="list-group-item""><a class="school_link" href="#" onclick="center(${school.X}, ${school.Y})">${school.School_Name} ${school.distance}km</a></li>`);
         }
     }
+
+    function getSchoolsTop() {
+        let filteredSchools = [];
+        if (markers && markers.length > 0) {
+            for (marker of markers) {
+                marker.remove();
+            }
+        }
+        markers = [];
+        list.html('');
+
+        let type = $('#type-top option:selected').val();
+        let sector = $('#sector-top option:selected').val();
+        let resp = $('#resp-top option:selected').val();
+        for (let school of schools) {
+            if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
+                filteredSchools.push(school);
+            }
+        }
+        for (let school of filteredSchools) {
+            let marker = new mapboxgl.Marker();
+            let popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`<h4>${school.School_Name}</h4>
+                    <p>Education Sector: ${school.Education_Sector}
+                    <br>School Type: ${school.School_Type}
+                    <br>Address: ${school.Address_Line_1 ? school.Address_Line_1 + ', ' : ''}
+                    ${school.Address_Line_2 ? school.Address_Line_2 + ', ' : ''}
+                    ${school.Address_Town ? school.Address_Town + ', ' : ''}
+                    ${school.Address_State ? school.Address_State + ', ' : ''}
+                    ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
+                    </p>`);
+            marker.setLngLat([school.X, school.Y])
+                .setPopup(popup)
+                .addTo(map);
+            markers.push(marker);
+
+            list.append(`<li class="list-group-item""><a class="school_link" href="#" onclick="center(${school.X}, ${school.Y})">${school.School_Name}</a></li>`);
+        }
+    }
+
     function center(lng, lat) {
         map.flyTo({
             center: [lng, lat],
