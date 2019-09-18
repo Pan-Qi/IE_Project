@@ -33,7 +33,7 @@
                 to build successful lives for themselves and their families in the Victoria.
             </p>
             <ul class="banner-agileits">
-                <li><a href="@Url.Action("Population", "Home")" id="jumbotron-button">About Us</a></li>
+                <li><a href="@Url.Action("About", "Home")" id="jumbotron-button">About Us</a></li>
             </ul>
             <a href="#about" class="btn btn-circle scroll" id="hand">
                 <i class="fa fa-hand-o-down" aria-hidden="true"></i>
@@ -150,7 +150,7 @@
             <div class="col-sm-4 service-tile">
                 <div class="tile-background">
                     <div class="tile-content">
-                        <h4>Career</h4>
+                        <h4><a href="@Url.Action("Career", "Home")">Career</a></h4>
                         <p>Help you start your career in Victoria!</p>
                     </div>
                 </div>
@@ -158,8 +158,25 @@
             <div class="col-sm-4 service-tile">
                 <div class="tile-background">
                     <div class="tile-content">
-                        <h4>Become Volunteer</h4>
+                        <h4><a href="####" data-toggle="modal" data-target="#Modal1">Become Volunteer</a></h4>
                         <p>Want to help refugees in Victoria. Join us!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><b>Become Volunteer</b></h4>
+                    </div>
+                    <div class="modal-body">
+                        Want to help refugees in Victoria. Join us!
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" href="@Url.Action("Population", "Home")" role="button">Know more about refugee.</a>
                     </div>
                 </div>
             </div>
@@ -182,12 +199,12 @@
                 </div>
             </div>
             <div class="col-sm-4 service-tile">
-                    <div class="tile-background">
-                        <div class="tile-content">
-                            <h4>Make a donation</h4>
-                            <p>Participate in upcoming refugee social events.</p>
-                        </div>
+                <div class="tile-background">
+                    <div class="tile-content">
+                        <h4>Make a donation</h4>
+                        <p>Participate in upcoming refugee social events.</p>
                     </div>
+                </div>
             </div>
         </div>
     </div>

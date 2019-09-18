@@ -170,9 +170,12 @@
     <Content Include="Images\education4.jpg" />
     <Content Include="Images\education5.jpg" />
     <Content Include="Images\English.jpg" />
+    <Content Include="Images\find.jpg" />
     <Content Include="Images\find_job.jpg" />
     <Content Include="Images\fj_bac.jpg" />
     <Content Include="Images\health.jpg" />
+    <Content Include="Images\jobse.png" />
+    <Content Include="Images\jobse2.png" />
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
@@ -181,6 +184,7 @@
     <Content Include="Images\pixpoetry-Hkw1erBrzwc-unsplash.jpg" />
     <Content Include="Images\population.jpg" />
     <Content Include="Images\Refugee.jpg" />
+    <Content Include="Images\right.png" />
     <Content Include="Images\Saahil.jpg" />
     <Content Include="Images\Sakshi.jpg" />
     <Content Include="Images\skill.jpg" />
@@ -194,6 +198,7 @@
     <Content Include="Images\working.png" />
     <Content Include="Images\business.jpg" />
     <Content Include="Images\working2.jpg" />
+    <Content Include="Images\workright2.jpg" />
     <Content Include="Images\youth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\classie.js" />
@@ -251,6 +256,7 @@
     <Content Include="Views\Home\Career.cshtml" />
     <Content Include="Views\Home\Skill.cshtml" />
     <Content Include="Views\Home\Find_job.cshtml" />
+    <Content Include="Views\Home\Workright.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

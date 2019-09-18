@@ -31,7 +31,7 @@ Plotly.d3.csv('/Static/population.csv', function(err, rows){
 
   var layout = {
         title: {
-        text:'<b>Population of refugees and asylum seekers in Australia</b>',
+        text:'<b>Number of refugees and asylum seekers in Australia</b>',
         font: {
           size: 18
         }
