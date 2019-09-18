@@ -74,6 +74,10 @@ namespace YRSP
                 "~/Scripts/school_data.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/Bundles/courses").Include(
+                "~/Scripts/courses.js"
+                ));
+
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //          "~/Content/bootstrap.css",
             //          "~/Content/site.css"));
