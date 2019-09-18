@@ -148,10 +148,15 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Images\0.png" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
+    <Content Include="Images\7.png" />
     <Content Include="Images\about07.jpg" />
     <Content Include="Images\Aboutback.jpg" />
-    <Content Include="Images\career.png" />
     <Content Include="Images\career_background_small.png" />
     <Content Include="Images\cb.png" />
     <Content Include="Images\cb2.png" />
@@ -166,6 +171,7 @@
     <Content Include="Images\education5.jpg" />
     <Content Include="Images\English.jpg" />
     <Content Include="Images\find_job.jpg" />
+    <Content Include="Images\fj_bac.jpg" />
     <Content Include="Images\health.jpg" />
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
@@ -183,7 +189,6 @@
     <Content Include="Images\skill3.png" />
     <Content Include="Images\skill_bc.png" />
     <Content Include="Images\systemic-evaluation.jpg" />
-    <Content Include="Images\tou.jpg" />
     <Content Include="Images\working rights.png" />
     <Content Include="Images\working.jpg" />
     <Content Include="Images\working.png" />
@@ -192,6 +197,7 @@
     <Content Include="Images\youth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\classie.js" />
+    <Content Include="Scripts\courses.js" />
     <Content Include="Scripts\demo1.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\fullcalendar\core\main.min.js" />
@@ -244,6 +250,7 @@
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Career.cshtml" />
     <Content Include="Views\Home\Skill.cshtml" />
+    <Content Include="Views\Home\Find_job.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

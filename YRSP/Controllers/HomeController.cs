@@ -55,5 +55,10 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult Find_job()
+        {
+            return View();
+        }
     }
 }

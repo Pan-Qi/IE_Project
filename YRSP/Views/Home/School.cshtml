@@ -26,6 +26,8 @@
 <select id="sector">
     <option value="All">All</option>
 </select>
+
+
 <button id="button">Choose For Me</button>`);
     let types = new Set(schools.map(i => i.School_Type));
     let sectors = new Set(schools.map(i => i.Education_Sector));
@@ -68,6 +70,11 @@
 <select id="sector">
     <option value="All">All</option>
 </select>
+<label for="resp">Refugee Suport Project:</label>
+<select id="resp">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select><br/>
 <button class="choosebutton" onclick="getSchools()">Choose For Me</button>
 `);
         for (let type of types) {
@@ -90,10 +97,11 @@
         markers = [];
         list.html('');
 
-        type = $('#type option:selected').val();
-        sector = $('#sector option:selected').val();
+        let type = $('#type option:selected').val();
+        let sector = $('#sector option:selected').val();
+        let resp = $('#resp option:selected').val();
         for (let school of schools) {
-            if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type)) {
+            if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
                 let distance = getDistance(userPopUp._lngLat.lat, userPopUp._lngLat.lng, school.Y, school.X);
                 school.distance = (distance / 1000).toFixed(2);
                 filteredSchools.push(school);
