@@ -55,5 +55,10 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult Workright()
+        {
+            return View();
+        }
     }
 }
