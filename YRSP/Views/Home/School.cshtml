@@ -18,17 +18,6 @@
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
 <script>
     var userPopUp = new mapboxgl.Popup({ offset: 25 });
-    userPopUp.setHTML(`<label for="type">School Type:</label>
-<select id="type">
-    <option value="All">All</option>
-</select>
-<label for="sector">Education Sector:</label>
-<select id="sector">
-    <option value="All">All</option>
-</select>
-
-
-<button id="button">Choose For Me</button>`);
     let types = new Set(schools.map(i => i.School_Type));
     let sectors = new Set(schools.map(i => i.Education_Sector));
     for (let type of types) {

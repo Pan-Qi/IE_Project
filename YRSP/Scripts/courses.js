@@ -127,12 +127,12 @@ var courses = [
         "Description": "Having completed this course you will be able to understand the fundamentals of business writing, managing successful team meetings, developing effective business presentation and cross-cultural business communication skills.",
         "Link": "https://alison.com/topic/learn/72124/business-communication-introduction-to-business-writing-learning-outcomes"
     },
-    {
-        "Course_name": "Introduction to Stress Management",
-        "Type": "Health",
-        "Teaching method": "Online",
-        "Level": ["Elementary"],
-        "Description": "Having completed this course you will be able to understand what stress is, the sources of stress types of stress and learn learned stress management skills",
-        "Link": "https://alison.com/topic/learn/72902/what-is-stress"
-    }
+    //{
+    //    "Course_name": "Introduction to Stress Management",
+    //    "Type": "Health",
+    //    "Teaching method": "Online",
+    //    "Level": ["Elementary"],
+    //    "Description": "Having completed this course you will be able to understand what stress is, the sources of stress types of stress and learn learned stress management skills",
+    //    "Link": "https://alison.com/topic/learn/72902/what-is-stress"
+    //}
 ]
