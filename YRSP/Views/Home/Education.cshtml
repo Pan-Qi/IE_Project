@@ -1,4 +1,5 @@
 ﻿@Scripts.Render("~/Bundles/courses")
+<!--background image-->
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
     <div class="container-fluid" style="        height: 200px;
         background-image: url('../../Images/education3.jpg');
@@ -13,13 +14,16 @@
             <span class="spinner-rotate"></span>
         </div>
     </section>
+    <!--title-->
     <div style="height: 50px;" id="empty"></div>
     <section id="recommendation" data-stellar-background-ratio="2.5">
         <div class="container">
+            <!--title-->
             <div class="Course-title" data-wow-delay="0.1s">
                 <h2>Course Recommendation</h2>
                 <p style="font-size: 1.5em;">Select the best categories that fits you:</p>
             </div>
+            <!--filters-->
             <div class="row" style="text-align: center; font-size: 1.5em; margin-top: 10px; margin-bottom: 10px;">
                 <div class="col-md-3 col-sm-6">
                     <label for="type">Type:</label>
@@ -47,9 +51,9 @@
                 <div class="col-md-3 col-sm-6">
                     <button id="button">See Courses</button>
                 </div>
-                </div>
-                <div class="row" id="course">
-                    @*<div class="col-md-4 col-sm-6 online" style="min-height: 400px">
+            </div>
+            <div class="row" id="course">
+                @*<div class="col-md-4 col-sm-6 online" style="min-height: 400px">
                 <!-- Course1 -->
                 <div class="course1" data-wow-delay="0.4s">
                     <a href="https://www.ames.net.au/learn-english/english-for-youth" target="_blank">
@@ -230,8 +234,8 @@
                     </div>
                 </div>
             </div>*@
-                </div>
             </div>
+        </div>
     </section>
     <script>
         let types = new Set(courses.map(i => i.Type));
@@ -292,7 +296,7 @@
 `);
             }
         });
-
+        
         function getImage(type) {
             let imagePath = "";
             switch (type) {
