@@ -2364,4 +2364,20 @@ a.w3_agile_vimeo:hover{
 
 #list {
     z-index: 3;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #list {
+        position: inherit;
+        width: 100%;
+    }
 }

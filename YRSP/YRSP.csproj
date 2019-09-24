@@ -165,9 +165,11 @@
     <Content Include="Images\education3.jpg" />
     <Content Include="Images\education4.jpg" />
     <Content Include="Images\education5.jpg" />
+    <Content Include="Images\eduInAu.jpg" />
     <Content Include="Images\English.jpg" />
     <Content Include="Images\find.jpg" />
     <Content Include="Images\find_job.jpg" />
+    <Content Include="Images\Find_school.jpg" />
     <Content Include="Images\fj_bac.jpg" />
     <Content Include="Images\health.jpg" />
     <Content Include="Images\jobse.png" />
@@ -176,12 +178,14 @@
     <Content Include="Images\Li.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
+    <Content Include="Images\main1.jpg" />
     <Content Include="Images\Pan.jpg" />
     <Content Include="Images\perry-grone-lbLgFFlADrY-unsplash.jpg" />
     <Content Include="Images\pixpoetry-Hkw1erBrzwc-unsplash.jpg" />
     <Content Include="Images\population.jpg" />
     <Content Include="Images\prepare_interview.jpg" />
     <Content Include="Images\Refugee.jpg" />
+    <Content Include="Images\respintro.png" />
     <Content Include="Images\right.png" />
     <Content Include="Images\Saahil.jpg" />
     <Content Include="Images\Sakshi.jpg" />
@@ -245,6 +249,7 @@
     <Content Include="Static\population.csv" />
     <Content Include="Views\Home\Population.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
+    <None Include="Properties\PublishProfiles\yrsp - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\yrsp-server - Web Deploy.pubxml" />
     <Content Include="Static\countryOfOriginAS.csv" />
     <Content Include="Static\countryOfOriginRefugee.csv" />
