@@ -38,7 +38,7 @@
                 <img src="~/Images/respintro.png" style="width: 100%" />
             </a>
             <div class="text-center">
-                <h4>Preparations for a job interview</h4>
+                <h4>Refugee Education Support Program</h4>
             </div>
         </div>
         <div class="col-md-4">
@@ -46,18 +46,15 @@
                 <img src="~/Images/eduInAu.jpg" style="width: 100%" />
             </a>
             <div class="text-center">
-                <h4>Free working skills courses</h4>
+                <h4>Education in Australia</h4>
             </div>
         </div>
     </div>
+    <hr id="section1" style=" border-color:black; border-width:thin" />
     <hr style=" border-color:black; border-width:thin" />
-    <hr style=" border-color:black; border-width:thin" />
-
-
-    <h3>
-        Select the best school that fits you<br />Or click on the map to
-        rank schools by distance to your location.
-    </h3>
+    <br />
+    <h3 >Find RESP School</h3>
+    <p>Select the best school that fits you. Or click on the map to rank schools by distance to your location.</p>
 
     <div class="row text-center" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-md-3 col-sm-6">
@@ -91,42 +88,91 @@
     @*<script src="/Static/vic_school_locations_2019_resp_merged_v1.js"></script>*@
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
-    <script>
-        var userPopUp = new mapboxgl.Popup({ offset: 25 });
-        let types = new Set(schools.map(i => i.School_Type));
-        let sectors = new Set(schools.map(i => i.Education_Sector));
-        for (let type of types) {
-            $('#type-top').append(new Option(type, type));
-        }
-        for (let sector of sectors) {
-            $('#sector-top').append(new Option(sector, sector));
-        }
+    
+    <br id="section2"/>
+    <br />
+    <h3 >Refugee Education Support Program (RESP)</h3>
+    <p>The Refugee Education Support Program (RESP) is a government funded initiative to support school students from refugee backgrounds in Victoria. The program is run by the Department of Education and Training in partnership with the Centre for Multicultural Youth (CMY) and Foundation House. The program helps schools provide high quality and inclusive education to students from refugee backgrounds. RESP supports students from refugee backgrounds through:</p>
+    <ul style="padding-left:40px">
+        <li>Provision of out-of-school hours learning support</li>
+        <li>Provision of professional learning workshops</li>
+        <li>Intensive support and secondary consultation</li>
+        <li>Development of an action plan for schools after completing an audit of school activities</li>
+        <li>Community engagement and participation strategies that support families from refugee backgrounds</li>
+        <li>Building partnerships with community, business and government organisations</li>
+    </ul>
+    <br />
+    <p>Schools participate in this program in clusters of nearby geographical areas. Several schools have participated in this program across Melbourne and Regional Victoria. You can read more about the program on the websites of <a href="https://www.learndirect.com/funding-options/free-employability-skills" target="_blank">Foundation House</a> and <a href="https://www.learndirect.com/funding-options/free-employability-skills" target="_blank">Centre for Multicultural Youth</a></p>
+    <br id="section3"/>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <h3 >School Education in Australia</h3>
+            <p>School education in Australia is for a total period of 13 years, and divided into:</p>
+            <ul style="padding-left:40px">
+                <li><strong>Primary School:</strong> Runs from Kindergarten/Preparatory through to Year 6. The age of primary school students is typically between 5 and 12 years</li>
+                <li><strong>Secondary School:</strong> Runs from Year 7 to year 12. The age of secondary school students is typically between 12 and 20 years</li>
+            </ul>
+            <p>Apart from primary and secondary schools, there are language and special schools in Victoria. Language schools provide language classes and programs to school students from Preparatory to Year 12.  Special schools are schools for students with disabilities as well as schools that specialise in certain areas like arts, music, science, mathematics, etc. </p>
+            <p>The below graph shows the distribution of type of schools in Victoria that have participated in the Refugee Education Support program or all schools in Victoria (based on selection in the dropdown).</p>
+        </div>
+        <div class="col-md-6">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <!-- Dropdown for the chart -->
+            <form id="form1" name="form1" onchange="drawChart()" style="text-align: center">
+                <select id="thedropdown" style="height: 25px">
+                    <option value="All Schools" selected>All Schools in VIC</option>
+                    <option value="Refugee Support Schools">Refugee Support Schools in VIC</option>
+                </select>
+            </form>
+            <!-- Donut Chart -->
+            <div id="donutchart" style="width:100%;height:500px"></div>
+            @Scripts.Render("~/Bundles/schoolviz")
+        </div>
+    </div>
 
-        mapboxgl.accessToken = 'pk.eyJ1IjoicHExMjM0IiwiYSI6ImNqbmJsazA0MjBhazYzcWtnb3cxNmtodm0ifQ.GcpMAuvOieKuI2pjO3bBjg';
-        let map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            zoom: 10,
-            center: [144.96332, -37.814], // Victoria, Australia
-        });
+    
+</div>
 
-        map.addControl(new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl
-        }));
 
-        map.addControl(new mapboxgl.GeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: true
-            },
-            trackUserLocation: true
-        }));
 
-        var userMarker = new mapboxgl.Marker();
+@*map function*@
+<script>
+    var userPopUp = new mapboxgl.Popup({ offset: 25 });
+    let types = new Set(schools.map(i => i.School_Type));
+    let sectors = new Set(schools.map(i => i.Education_Sector));
+    for (let type of types) {
+        $('#type-top').append(new Option(type, type));
+    }
+    for (let sector of sectors) {
+        $('#sector-top').append(new Option(sector, sector));
+    }
 
-        map.on('click', (e) => {
-            userPopUp.setLngLat(e.lngLat).addTo(map);
-            userPopUp.setHTML(`<label for="type">School Type:</label>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicHExMjM0IiwiYSI6ImNqbmJsazA0MjBhazYzcWtnb3cxNmtodm0ifQ.GcpMAuvOieKuI2pjO3bBjg';
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 10,
+        center: [144.96332, -37.814], // Victoria, Australia
+    });
+
+    map.addControl(new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+    }));
+
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true
+    }));
+
+    var userMarker = new mapboxgl.Marker();
+
+    map.on('click', (e) => {
+        userPopUp.setLngLat(e.lngLat).addTo(map);
+        userPopUp.setHTML(`<label for="type">School Type:</label>
 <select id="type">
             <option value="All">All</option>
 </select>
@@ -141,147 +187,117 @@
 </select><br/>
 <button class="choosebutton" onclick="getSchools()">Choose For Me</button>
 `);
-            for (let type of types) {
-                $('#type').append(new Option(type, type));
+        for (let type of types) {
+            $('#type').append(new Option(type, type));
+        }
+        for (let sector of sectors) {
+            $('#sector').append(new Option(sector, sector));
+        }
+    });
+
+    let markers;
+    let list = $('#list');
+    function getSchools() {
+        let filteredSchools = [];
+        if (markers && markers.length > 0) {
+            for (marker of markers) {
+                marker.remove();
             }
-            for (let sector of sectors) {
-                $('#sector').append(new Option(sector, sector));
+        }
+        markers = [];
+        list.html('');
+
+        let type = $('#type option:selected').val();
+        let sector = $('#sector option:selected').val();
+        let resp = $('#resp option:selected').val();
+        for (let school of schools) {
+            if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
+                let distance = getDistance(userPopUp._lngLat.lat, userPopUp._lngLat.lng, school.Y, school.X);
+                school.distance = (distance / 1000).toFixed(2);
+                filteredSchools.push(school);
             }
+        }
+
+        filteredSchools.sort((a, b) => (Number(a.distance) > Number(b.distance) ? 1 : -1));
+
+        for (let school of filteredSchools) {
+            let marker = new mapboxgl.Marker();
+            let popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`<h4>${school.School_Name}</h4>
+                            <p>Education Sector: ${school.Education_Sector}
+                            <br>School Type: ${school.School_Type}
+                            <br>Address: ${school.Address_Line_1 ? school.Address_Line_1 + ', ' : ''}
+                            ${school.Address_Line_2 ? school.Address_Line_2 + ', ' : ''}
+                            ${school.Address_Town ? school.Address_Town + ', ' : ''}
+                            ${school.Address_State ? school.Address_State + ', ' : ''}
+                            ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
+                            </p>`);
+            marker.setLngLat([school.X, school.Y])
+                .setPopup(popup)
+                .addTo(map);
+            markers.push(marker);
+
+            list.append(`<li class="list-group-item""><a class="school_link" href="javascript:center(${school.X}, ${school.Y})">${school.School_Name} <span style="color: black; padding-left: 10px;">${school.distance}km</span></a></li>`);
+        }
+    }
+
+    function getSchoolsTop() {
+        let filteredSchools = [];
+        if (markers && markers.length > 0) {
+            for (marker of markers) {
+                marker.remove();
+            }
+        }
+        markers = [];
+        list.html('');
+
+        let type = $('#type-top option:selected').val();
+        let sector = $('#sector-top option:selected').val();
+        let resp = $('#resp-top option:selected').val();
+        for (let school of schools) {
+            if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
+                filteredSchools.push(school);
+            }
+        }
+        for (let school of filteredSchools) {
+            let marker = new mapboxgl.Marker();
+            let popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`<h4>${school.School_Name}</h4>
+                            <p>Education Sector: ${school.Education_Sector}
+                            <br>School Type: ${school.School_Type}
+                            <br>Address: ${school.Address_Line_1 ? school.Address_Line_1 + ', ' : ''}
+                            ${school.Address_Line_2 ? school.Address_Line_2 + ', ' : ''}
+                            ${school.Address_Town ? school.Address_Town + ', ' : ''}
+                            ${school.Address_State ? school.Address_State + ', ' : ''}
+                            ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
+                            </p>`);
+            marker.setLngLat([school.X, school.Y])
+                .setPopup(popup)
+                .addTo(map);
+            markers.push(marker);
+
+            list.append(`<li class="list-group-item""><a class="school_link" href="javascript:center(${school.X}, ${school.Y})">${school.School_Name}</a></li>`);
+        }
+    }
+
+    function center(lng, lat) {
+        map.flyTo({
+            center: [lng, lat],
+            zoom: 16,
         });
+    }
 
-        let markers;
-        let list = $('#list');
-        function getSchools() {
-            let filteredSchools = [];
-            if (markers && markers.length > 0) {
-                for (marker of markers) {
-                    marker.remove();
-                }
-            }
-            markers = [];
-            list.html('');
+    // get distance in meters
+    function getDistance(lat1, lng1, lat2, lng2) {
+        var dis = 0;
+        var radLat1 = toRadians(lat1);
+        var radLat2 = toRadians(lat2);
+        var deltaLat = radLat1 - radLat2;
+        var deltaLng = toRadians(lng1) - toRadians(lng2);
+        var dis = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(deltaLng / 2), 2)));
+        return dis * 6378137;
 
-            let type = $('#type option:selected').val();
-            let sector = $('#sector option:selected').val();
-            let resp = $('#resp option:selected').val();
-            for (let school of schools) {
-                if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
-                    let distance = getDistance(userPopUp._lngLat.lat, userPopUp._lngLat.lng, school.Y, school.X);
-                    school.distance = (distance / 1000).toFixed(2);
-                    filteredSchools.push(school);
-                }
-            }
+        function toRadians(d) { return (d * Math.PI / 180); }
+    }
 
-            filteredSchools.sort((a, b) => (Number(a.distance) > Number(b.distance) ? 1 : -1));
-
-            for (let school of filteredSchools) {
-                let marker = new mapboxgl.Marker();
-                let popup = new mapboxgl.Popup({ offset: 25 })
-                    .setHTML(`<h4>${school.School_Name}</h4>
-                            <p>Education Sector: ${school.Education_Sector}
-                            <br>School Type: ${school.School_Type}
-                            <br>Address: ${school.Address_Line_1 ? school.Address_Line_1 + ', ' : ''}
-                            ${school.Address_Line_2 ? school.Address_Line_2 + ', ' : ''}
-                            ${school.Address_Town ? school.Address_Town + ', ' : ''}
-                            ${school.Address_State ? school.Address_State + ', ' : ''}
-                            ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
-                            </p>`);
-                marker.setLngLat([school.X, school.Y])
-                    .setPopup(popup)
-                    .addTo(map);
-                markers.push(marker);
-
-                list.append(`<li class="list-group-item""><a class="school_link" href="javascript:center(${school.X}, ${school.Y})">${school.School_Name} <span style="color: black; padding-left: 10px;">${school.distance}km</span></a></li>`);
-            }
-        }
-
-        function getSchoolsTop() {
-            let filteredSchools = [];
-            if (markers && markers.length > 0) {
-                for (marker of markers) {
-                    marker.remove();
-                }
-            }
-            markers = [];
-            list.html('');
-
-            let type = $('#type-top option:selected').val();
-            let sector = $('#sector-top option:selected').val();
-            let resp = $('#resp-top option:selected').val();
-            for (let school of schools) {
-                if ((sector === 'All' || school.Education_Sector === sector) && (type === 'All' || school.School_Type === type) && school.RESP_Part === resp) {
-                    filteredSchools.push(school);
-                }
-            }
-            for (let school of filteredSchools) {
-                let marker = new mapboxgl.Marker();
-                let popup = new mapboxgl.Popup({ offset: 25 })
-                    .setHTML(`<h4>${school.School_Name}</h4>
-                            <p>Education Sector: ${school.Education_Sector}
-                            <br>School Type: ${school.School_Type}
-                            <br>Address: ${school.Address_Line_1 ? school.Address_Line_1 + ', ' : ''}
-                            ${school.Address_Line_2 ? school.Address_Line_2 + ', ' : ''}
-                            ${school.Address_Town ? school.Address_Town + ', ' : ''}
-                            ${school.Address_State ? school.Address_State + ', ' : ''}
-                            ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
-                            </p>`);
-                marker.setLngLat([school.X, school.Y])
-                    .setPopup(popup)
-                    .addTo(map);
-                markers.push(marker);
-
-                list.append(`<li class="list-group-item""><a class="school_link" href="javascript:center(${school.X}, ${school.Y})">${school.School_Name}</a></li>`);
-            }
-        }
-
-        function center(lng, lat) {
-            map.flyTo({
-                center: [lng, lat],
-                zoom: 16,
-            });
-        }
-
-        // get distance in meters
-        function getDistance(lat1, lng1, lat2, lng2) {
-            var dis = 0;
-            var radLat1 = toRadians(lat1);
-            var radLat2 = toRadians(lat2);
-            var deltaLat = radLat1 - radLat2;
-            var deltaLng = toRadians(lng1) - toRadians(lng2);
-            var dis = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(deltaLng / 2), 2)));
-            return dis * 6378137;
-
-            function toRadians(d) { return (d * Math.PI / 180); }
-        }
-
-    </script>
-    <br />
-    <br />
-    <h3>Refugee Education Support Program (RESP)</h3>
-    <p>The Refugee Education Support Program (RESP) is a government funded initiative to support school students from refugee backgrounds in Victoria. The program is run by the Department of Education and Training in partnership with the Centre for Multicultural Youth (CMY) and Foundation House. The program helps schools provide high quality and inclusive education to students from refugee backgrounds. RESP supports students from refugee backgrounds through:</p>
-    <ul style="padding-left:40px">
-        <li>Provision of out-of-school hours learning support</li>
-        <li>Provision of professional learning workshops</li>
-        <li>Intensive support and secondary consultation</li>
-        <li>Development of an action plan for schools after completing an audit of school activities</li>
-        <li>Community engagement and participation strategies that support families from refugee backgrounds</li>
-        <li>Building partnerships with community, business and government organisations</li>
-    </ul>
-    <br />
-    <p>Schools participate in this program in clusters of nearby geographical areas. Several schools have participated in this program across Melbourne and Regional Victoria. You can read more about the program on the websites of <a href="https://www.learndirect.com/funding-options/free-employability-skills" target="_blank">Foundation House</a> and <a href="https://www.learndirect.com/funding-options/free-employability-skills" target="_blank">Centre for Multicultural Youth</a></p>
-
-    <div class="row">
-        <div class="col-md-6">
-            <h3>School Education in Australia</h3>
-            <p>School education in Australia is for a total period of 13 years, and divided into:</p>
-            <ul style="padding-left:40px">
-                <li><strong>Primary School:</strong> Runs from Kindergarten/Preparatory through to Year 6. The age of primary school students is typically between 5 and 12 years</li>
-                <li><strong>Secondary School:</strong> Runs from Year 7 to year 12. The age of secondary school students is typically between 12 and 20 years</li>
-            </ul>
-            <p>Apart from primary and secondary schools, there are language and special schools in Victoria. Language schools provide language classes and programs to school students from Preparatory to Year 12.  Special schools are schools for students with disabilities as well as schools that specialise in certain areas like arts, music, science, mathematics, etc. </p>
-            <p>The below graph shows the distribution of type of schools in Victoria that have participated in the Refugee Education Support program or all schools in Victoria (based on selection in the dropdown).</p>
-        </div>
-    </div>
-
-    
-</div>
+</script>
