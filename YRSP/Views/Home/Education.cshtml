@@ -9,6 +9,15 @@
         <div class="content">
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <br />
+            <h3 class="w3l-title"><span>C</span>ourse <span>R</span>ecommendation</h3>
+            <p style="font-size:1.2em">Select the best categories that fits you.</p>
+        </div>
+    </div>
+
     <section class="preloader">
         <div class="spinner">
             <span class="spinner-rotate"></span>
@@ -19,10 +28,9 @@
     <section id="recommendation" data-stellar-background-ratio="2.5">
         <div class="container">
             <!--title-->
-            <div class="Course-title" data-wow-delay="0.1s">
-                <h2>Course Recommendation</h2>
-                <p style="font-size: 1.5em;">Select the best categories that fits you:</p>
-            </div>
+            @*<h3 class="w3l-title"><span>C</span>ourse <span>R</span>ecommendation</h3>
+                <p>Select the best categories that fits you.</p>*@
+
             <!--filters-->
             <div class="row" style="text-align: center; font-size: 1.5em; margin-top: 10px; margin-bottom: 10px;">
                 <div class="col-md-3 col-sm-6">
@@ -65,19 +73,19 @@
         $(document).ready(() => {
             for (let course of courses) {
                 $('#course').append(`
-            <div class="col-md-4 col-sm-6 online" style="height: 400px">
-                <div>
-                    <a href=""${course.Link}" target="_blank">
-                        <img src="${getImage(course.Type)}" class="img-responsive" alt="" style="width:500px;height:200px;">
-                    </a>
-                    <div class="course-info">
-                        <h3><a href="${course.Link}" target="_blank">${course.Course_name}</a></h3>
-                        <p>
-                            <strong>Description:</strong> ${course.Description}
-                        </p>
+                <div class="col-md-4 col-sm-6 online" style="height: 400px">
+                    <div>
+                        <a href=""${course.Link}" target="_blank">
+                            <img src="${getImage(course.Type)}" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="${course.Link}" target="_blank">${course.Course_name}</a></h3>
+                            <p>
+                                <strong>Description:</strong> ${course.Description}
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 `);
             }
@@ -98,24 +106,24 @@
 
             for (let course of filteredCourses) {
                 $('#course').append(`
-            <div class="col-md-4 col-sm-6 online" style="height: 400px">
-                <div>
-                    <a href=""${course.Link}" target="_blank">
-                        <img src="${getImage(course.Type)}" class="img-responsive" alt="" style="width:500px;height:200px;">
-                    </a>
-                    <div class="course-info">
-                        <h3><a href="${course.Link}" target="_blank">${course.Course_name}</a></h3>
-                        <p>
-                            <strong>Description:</strong> ${course.Description}
-                        </p>
+                <div class="col-md-4 col-sm-6 online" style="height: 400px">
+                    <div>
+                        <a href=""${course.Link}" target="_blank">
+                            <img src="${getImage(course.Type)}" class="img-responsive" alt="" style="width:500px;height:200px;">
+                        </a>
+                        <div class="course-info">
+                            <h3><a href="${course.Link}" target="_blank">${course.Course_name}</a></h3>
+                            <p>
+                                <strong>Description:</strong> ${course.Description}
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 `);
             }
         });
-        
+
         function getImage(type) {
             let imagePath = "";
             switch (type) {
@@ -137,8 +145,8 @@
             return imagePath;
         }
     </script>
-
     <style>
+
         select {
             margin-right: 10px;
         }

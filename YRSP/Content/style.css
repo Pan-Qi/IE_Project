@@ -308,7 +308,7 @@ h3.w3l-title {
     text-align: center;
     color: #000;
     letter-spacing: 2px;
-    margin-bottom:1.3em;
+    /*margin-bottom:1.3em;*/
 }
 h3.w3l-title span {
     color: #2f8eff;
