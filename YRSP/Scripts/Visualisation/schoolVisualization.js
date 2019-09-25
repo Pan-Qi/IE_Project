@@ -37,6 +37,7 @@ function drawChart() {
       pieHole: 0.4,
       width: '100%',
       height: '500px',
+      chartArea: {left:10,top:5}, // paddings for chartArea
         //colors: ['orange','#00cc33', 'pink', 'yellow','lightblue']
     };
     // draw the chart
