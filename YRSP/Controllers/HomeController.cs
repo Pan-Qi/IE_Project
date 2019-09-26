@@ -64,5 +64,10 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult Volunteer()
+        {
+            return View();
+        }
     }
 }
