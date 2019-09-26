@@ -195,6 +195,11 @@
     <Content Include="Images\skill3.png" />
     <Content Include="Images\skill_bc.png" />
     <Content Include="Images\systemic-evaluation.jpg" />
+    <Content Include="Images\v1.jpg" />
+    <Content Include="Images\v2.jpg" />
+    <Content Include="Images\v3.jpg" />
+    <Content Include="Images\volunteer.jpg" />
+    <Content Include="Images\volunteer2.jpg" />
     <Content Include="Images\working rights.png" />
     <Content Include="Images\working.jpg" />
     <Content Include="Images\working.png" />
@@ -260,6 +265,7 @@
     <Content Include="Views\Home\Skill.cshtml" />
     <Content Include="Views\Home\Find_job.cshtml" />
     <Content Include="Views\Home\Workright.cshtml" />
+    <Content Include="Views\Home\Volunteer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
