@@ -255,6 +255,7 @@
     <Content Include="Static\population.csv" />
     <Content Include="Views\Home\Population.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
+    <None Include="Properties\PublishProfiles\PQmengkang - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\yrsp - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\yrsp-server - Web Deploy.pubxml" />
     <Content Include="Static\countryOfOriginAS.csv" />
