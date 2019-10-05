@@ -7,7 +7,7 @@
         background-image: url('../../Images/volunteer2.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;">
+        background-size: cover">
 </div>
 
 <div class="container" style="font-size:20px">
@@ -15,7 +15,8 @@
         <div class="col-12 text-center">
             <br />
             <h3 class="w3l-title"><span>B</span>ecome <span>A </span><span>V</span>olunteer</h3>
-            <p>----------------------------------------------------------------------------------</p>
+            <p>Volunteer with the organisations that help refugees and asylum seekers in Australia. 
+            This section also provides information and statistics about refugees that will help you learn more about refugees and land a volunteering opportunity.</p>
             <hr style=" border-color:black; border-width:medium" />
         </div>
     </div>
@@ -23,7 +24,7 @@
         <div class="col-md-4">
             <a href="#section1"><img src="~/Images/v1.jpg" style="width: 100%" /></a>
             <div class="text-center">
-                <h4>Suitable jobs for refugees</h4>
+                <h4>Organisations helping refugees</h4>
             </div>
         </div>
         <div class="col-md-4">
@@ -31,15 +32,15 @@
                 <img src="~/Images/v2.jpg" style="width: 100%" />
             </a>
             <div class="text-center">
-                <h4>Refugee Employment Assistance Service</h4>
+                <h4>Learn about refugees</h4>
             </div>
         </div>
         <div class="col-md-4">
-            <a href="#section3">
+            <a href="@Url.Action("Population", "Home")">
                 <img src="~/Images/v3.jpg" style="width: 100%" />
             </a>
             <div class="text-center">
-                <h4>Start a job search</h4>
+                <h4>Statistics</h4>
             </div>
         </div>
     </div>
@@ -116,7 +117,7 @@
                 GoVolunteer is a website run by Volunteering Australia that matches prospective volunteers with suitable volunteering opportunities.
             </p>
             <br />
-            
+
             <br id="section2" />
             <br />
             <h3>Learn about refugees</h3>
@@ -125,23 +126,23 @@
                 Have you ever wondered about who is a refugee? Or are you confused with the difference between a refugee and an asylum seeker?<br />
                 <br />
                 Refugees are generally referred to people who have been forced to flee from their homes due to many reasons including violence, conflict, and war. A refugee fears returning to their home country because of the ill-treatment or violence that they may face for reasons of race, religion, nationality, political opinion.<br />
-                <br/>
+                <br />
                 Asylum Seekers are people who are seeking international protection for their fear of persecution in their home country. They are claiming to be in a refugee-like situation and are seeking legal protection, however, their claim for refugee status has not yet been officially determined.<br />
-                <br/>
+                <br />
                 You can read the definition of refugees and asylum seekers as per United Nations High Commissioner for Refugees (UNHCR) <a target="_blank" href="https://www.unrefugees.org/refugee-facts/what-is-a-refugee/">here</a>.
             </p>
 
         </div>
 
+        <div>
+            <br id="section3" />
+            <br />
+            <h3>Statistics</h3>
+            <hr style=" border-color:black;" />
+            <p>
+                Want to know more about refugees and asylum seekers in Australia. What are the facts? How many refugees does Australia accept for resettlement every year?
+                <a href="@Url.Action("Population", "Home")">Know More</a>
+            </p>
+        </div>
     </div>
-
-    <div>
-        <br id="section3" />
-        <br />
-        <h3>Statistics</h3>
-        <hr style=" border-color:black;" />
-        <p>Want to know more about refugees and asylum seekers in Australia. What are the facts? How many refugees does Australia accept for resettlement every year?
-            <a target="_blank" href="@Url.Action("Population", "Home")">Know More</a></p>
-    </div>
-
 </div>
