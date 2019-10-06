@@ -69,5 +69,30 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult Rights()
+        {
+            return View();
+        }
+
+        public ActionResult Lives()
+        {
+            return View();
+        }
+
+        public ActionResult Culture()
+        {
+            return View();
+        }
+
+        public ActionResult Weather()
+        {
+            return View();
+        }
+
+        public ActionResult Settle()
+        {
+            return View();
+        }
     }
 }
