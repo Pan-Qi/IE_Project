@@ -151,15 +151,18 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Images\0.png" />
     <Content Include="Images\1.png" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.png" />
     <Content Include="Images\about07.jpg" />
     <Content Include="Images\Aboutback.jpg" />
+    <Content Include="Images\career.png" />
     <Content Include="Images\career_background_small.png" />
     <Content Include="Images\cb.png" />
     <Content Include="Images\cb2.png" />
     <Content Include="Images\content-block4.jpg" />
+    <Content Include="Images\culture.jpg" />
     <Content Include="Images\digital.jpg" />
     <Content Include="Images\digital.png" />
     <Content Include="Images\education.jpg" />
@@ -179,6 +182,12 @@
     <Content Include="Images\jobse2.png" />
     <Content Include="Images\job_process.png" />
     <Content Include="Images\Li.jpg" />
+    <Content Include="Images\life1.jpg" />
+    <Content Include="Images\life1.png" />
+    <Content Include="Images\life2.jpg" />
+    <Content Include="Images\life3.jpg" />
+    <Content Include="Images\life4.png" />
+    <Content Include="Images\lives7.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
     <Content Include="Images\main1.jpg" />
@@ -190,8 +199,15 @@
     <Content Include="Images\Refugee.jpg" />
     <Content Include="Images\respintro.png" />
     <Content Include="Images\right.png" />
+    <Content Include="Images\rights_bg.png" />
     <Content Include="Images\Saahil.jpg" />
     <Content Include="Images\Sakshi.jpg" />
+    <Content Include="Images\school5.jpg" />
+    <Content Include="Images\se1.jpg" />
+    <Content Include="Images\se2.png" />
+    <Content Include="Images\se3.jpg" />
+    <Content Include="Images\se4.jpg" />
+    <Content Include="Images\settle.jpg" />
     <Content Include="Images\skill.jpg" />
     <Content Include="Images\skill1.png" />
     <Content Include="Images\skill2.png" />
@@ -203,6 +219,7 @@
     <Content Include="Images\v3.jpg" />
     <Content Include="Images\volunteer.jpg" />
     <Content Include="Images\volunteer2.jpg" />
+    <Content Include="Images\weather.jpg" />
     <Content Include="Images\working rights.png" />
     <Content Include="Images\working.jpg" />
     <Content Include="Images\working.png" />
@@ -270,6 +287,11 @@
     <Content Include="Views\Home\Find_job.cshtml" />
     <Content Include="Views\Home\Workright.cshtml" />
     <Content Include="Views\Home\Volunteer.cshtml" />
+    <Content Include="Views\Home\Rights.cshtml" />
+    <Content Include="Views\Home\Lives.cshtml" />
+    <Content Include="Views\Home\Culture.cshtml" />
+    <Content Include="Views\Home\Weather.cshtml" />
+    <Content Include="Views\Home\Settle.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

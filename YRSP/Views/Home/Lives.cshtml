@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Lives";
+}
+<!--background image-->
+<div class="container-fluid" style="height: 200px;
+        background-image: url('../../Images/lives7.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+</div>
+<!--title-->
+<div class="container" style="font-size:20px">
+    <div class="row">
+        <div class="col-12 text-center">
+            <br />
+            <h3 class="w3l-title"><span>L</span>ife in <span>A</span>ustralia</h3>
+            <p>Learn more about Australian culture, weather and other useful information that helps you settle better here in Victoria.</p>
+            <hr style=" border-color:black; border-width:medium" />
+        </div>
+    </div>
+    <!--links to 3 subpages-->
+    <div class="row">
+        <div class="col-md-4">
+            <a href="@Url.Action("Culture", "Home")"><img src="~/Images/life1.jpg" style="width: 100%" /></a>
+            <div class="text-center">
+                <h4>Learn about Australian Culture</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <a href="@Url.Action("Weather", "Home")"><img src="~/Images/life2.jpg" style="width: 100%" /></a>
+            <div class="text-center">
+                <h4>Learn about Weather</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <a href="@Url.Action("Settle", "Home")"><img src="~/Images/life3.jpg" style="width: 100%" /></a>
+            <div class="text-center">
+                <h4>Getting Settled</h4>
+            </div>
+        </div>
+    </div>
+
+    <hr style=" border-color:black; border-width:thin" />
+    <hr style=" border-color:black; border-width:thin" />
+
+    <!--brief intro on career page-->
+    <div class="row">
+        <div class="col-12 ">
+            <br />
+            <br />
+
+            <h3>In this section, you can find many useful resources about:</h3>
+            <br />
+            <h4>Australian Culture</h4>
+            <p>
+                Australian culture is vast and diverse. Many young refugees can experience culture shock when they first
+                arrive in Australia.
+                <a href="@Url.Action("Culture", "Home")"><b>Learn More.</b></a>
+            </p>
+            <br />
+            <h4>Weather</h4>
+            <p>Australia’s weather is opposite when compared with that of northern hemisphere.<a href="@Url.Action("Weather", "Home")"><b>Learn More.</b></a> </p>
+            <br>
+            <h4>Getting Settled</h4>
+            <p>
+                Basic information regarding places to help you purchase groceries, clothes, electronics, health services.
+                <a href="@Url.Action("Settle", "Home")"><b>Learn More.</b></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
