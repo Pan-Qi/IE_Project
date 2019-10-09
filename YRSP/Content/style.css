@@ -2265,7 +2265,6 @@ div.transbox {
 }
 
 .tile-background {
-    background: url('../Images/content-block4.jpg') no-repeat center;
     height: 100%;
     padding: 20px;
     background-size: cover;
@@ -2275,6 +2274,35 @@ div.transbox {
     -ms-background-size: cover;
 }
 
+#Education {
+    background: url('../Images/heducation.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#Life {
+    background: url('../Images/hlife.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#Career {
+    background: url('../Images/hwork.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#Event {
+    background: url('../Images/hevent.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#Rights {
+    background: url('../Images/hright.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#Volunteer {
+    background: url('../Images/hvolunteer.jpg') no-repeat center;
+    background-size: cover;
+}
 .tile-content {
     text-align: center;
     margin: 20px;
