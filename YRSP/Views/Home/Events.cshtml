@@ -44,11 +44,9 @@
                 const now = new Date();
                 const eventDate = new Date(info.event.start);
                 if (eventDate < now) {
-                    atitle = `<img src="${info.event.extendedProps.img}"/>` + `<br><h3>Expired</h3>`
-                    console.log('ex')
+                    atitle = `<img class="img-responsive" src="${info.event.extendedProps.img}"/>` + `<br><h3>Expired</h3>`;
                 } else {
-                    atitle = `<div><img src="${info.event.extendedProps.img}"/>` + info.event.extendedProps.description + `<br><a class="btn btn-primary" href="${info.event.extendedProps.link}" target="_blank">Detail</a></div>`;
-                    console.log('not ex')
+                    atitle = `<div><img class="img-responsive" src="${info.event.extendedProps.img}"/>` + info.event.extendedProps.description + `<br><a class="btn btn-primary" href="${info.event.extendedProps.link}" target="_blank">Detail</a></div>`;
                 }
                 var tooltip = new Tooltip(info.el, {
                     title: atitle,

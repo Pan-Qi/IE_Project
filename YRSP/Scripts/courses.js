@@ -68,7 +68,7 @@ var courses = [
         "Type": "English skills",
         "Teaching method": "Offline",
         "Level": ["Elementary"],
-        "Description": "These classes are for asylum seekers and refugees who are wanting to improve their English skills. Classes run every Thursday 10am – 1pm at Footscray Library during school terms.",
+        "Description": "These classes are for asylum seekers and refugees who are wanting to improve their English skills. Classes run every Thursday 10am ?1pm at Footscray Library during school terms.",
         "Link": "https://www.ycc.net.au/community-engagement/news/free-classes-asylum-seekers-refugees/"
     },
     {
