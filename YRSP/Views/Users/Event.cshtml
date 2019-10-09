@@ -32,25 +32,25 @@
 <div class="row text-center" style="margin-top: 10px; margin-bottom: 10px;">
     <div class="col-md-3 col-sm-6">
         <label for="location">Location:</label>
-        <select id="location-top">
+        <select id="location">
             <option value="All">All</option>
         </select>
     </div>
     <div class="col-md-3 col-sm-6">
         <label for="category">Category:</label>
-        <select id="category-top">
+        <select id="category">
             <option value="All">All</option>
         </select>
     </div>
     <div class="col-md-3 col-sm-6">
         <label for="price">Price:</label>
-        <select id="price-top">
+        <select id="price">
             <option value="All">All</option>
             <option value="Yes">Free</option>
             <option value="No">Not Free</option>
         </select>
     </div>
-    <div class="col-md-3 col-sm-6"><button class="choosebutton" onclick="getEventsTop()">Filter Events</button></div>
+    <div class="col-md-3 col-sm-6"><button class="choosebutton">Filter Events</button></div>
 </div>
 
 
@@ -65,10 +65,10 @@
     let locations = new Set(events.events.map(i => i.location));
     let categories = new Set(events.events.map(i => i.category));
     for (let location of locations) {
-        $('#location-top').append(new Option(location, location));
+        $('#location').append(new Option(location, location));
     }
     for (let category of categories) {
-        $('#category-top').append(new Option(category, category));
+        $('#category').append(new Option(category, category));
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -104,8 +104,26 @@
         });
 
         console.log(calendar);
-
         calendar.render();
+        $('.choosebutton').click(() => {
+            let filteredEvents = {};
+            filteredEvents['events'] = [];
+            let location = $('#location option:selected').val();
+            let category = $('#category option:selected').val();
+            let price = $('#price option:selected').val();
+            if (price === 'Yes')
+                price = true
+            else if (price === 'No')
+                price = false
+
+            for (let event of events.events) {
+                if ((location === 'All' || event.location === location) && (category === 'All' || event.category === category) && (price === 'All' || event.is_free === price)) {
+                    filteredEvents['events'].push(event);
+                }
+            }
+            calendar.removeAllEventSources();
+            calendar.addEventSource(filteredEvents);
+        });
     });
 
 </script>

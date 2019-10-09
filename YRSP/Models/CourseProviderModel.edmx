@@ -4,17 +4,59 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="CourseProviderModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="CourseProviderModelTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="CourseProviderModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CourseProviderModelStoreContainer">
+    <EntitySet Name="CoursesSet" EntityType="CourseProviderModel.Store.CoursesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Course_ProviderSet" EntityType="CourseProviderModel.Store.Course_ProviderSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CoursesCourse_Provider" Association="CourseProviderModel.Store.CoursesCourse_Provider">
+      <End Role="Courses" EntitySet="CoursesSet" />
+      <End Role="Course_Provider" EntitySet="Course_ProviderSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CoursesSet">
+    <Key>
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="course_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="course_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="course_type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="course_teaching_method" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="course_level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="course_description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="course_link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Course_Provider_provider_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Course_ProviderSet">
+    <Key>
+      <PropertyRef Name="provider_id" />
+    </Key>
+    <Property Name="provider_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="provider_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="provider_website" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="CoursesCourse_Provider">
+    <End Role="Courses" Type="CourseProviderModel.Store.CoursesSet" Multiplicity="*" />
+    <End Role="Course_Provider" Type="CourseProviderModel.Store.Course_ProviderSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Course_Provider">
+        <PropertyRef Name="provider_id" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="Course_Provider_provider_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CourseProviderModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="CourseProviderModelContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CoursesSet" EntityType="CourseProviderModel.Courses" />
           <EntitySet Name="Course_ProviderSet" EntityType="CourseProviderModel.Course_Provider" />
+          <AssociationSet Name="CoursesCourse_Provider" Association="CourseProviderModel.CoursesCourse_Provider">
+            <End Role="Courses" EntitySet="CoursesSet" />
+            <End Role="Course_Provider" EntitySet="Course_ProviderSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Courses">
           <Key>
@@ -27,6 +69,7 @@
           <Property Name="course_level" Type="String" Nullable="false" />
           <Property Name="course_description" Type="String" Nullable="false" />
           <Property Name="course_link" Type="String" Nullable="false" />
+          <NavigationProperty Name="Course_Provider" Relationship="CourseProviderModel.CoursesCourse_Provider" FromRole="Courses" ToRole="Course_Provider" />
         </EntityType>
         <EntityType Name="Course_Provider">
           <Key>
@@ -35,18 +78,50 @@
           <Property Name="provider_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="provider_name" Type="String" Nullable="false" />
           <Property Name="provider_website" Type="String" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="CourseProviderModel.CoursesCourse_Provider" FromRole="Course_Provider" ToRole="Courses" />
         </EntityType>
+        <Association Name="CoursesCourse_Provider">
+          <End Type="CourseProviderModel.Courses" Role="Courses" Multiplicity="*" />
+          <End Type="CourseProviderModel.Course_Provider" Role="Course_Provider" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="CourseProviderModel" />
-        <Alias Key="Target" Value="CourseProviderModel.Store" />
-        <EntityContainerMapping CdmEntityContainer="CourseProviderModelContainer" StorageEntityContainer="CourseProviderModelTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CourseProviderModelStoreContainer" CdmEntityContainer="CourseProviderModelContainer">
+    <EntitySetMapping Name="CoursesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CourseProviderModel.Courses)">
+        <MappingFragment StoreEntitySet="CoursesSet">
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="course_name" ColumnName="course_name" />
+          <ScalarProperty Name="course_type" ColumnName="course_type" />
+          <ScalarProperty Name="course_teaching_method" ColumnName="course_teaching_method" />
+          <ScalarProperty Name="course_level" ColumnName="course_level" />
+          <ScalarProperty Name="course_description" ColumnName="course_description" />
+          <ScalarProperty Name="course_link" ColumnName="course_link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course_ProviderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CourseProviderModel.Course_Provider)">
+        <MappingFragment StoreEntitySet="Course_ProviderSet">
+          <ScalarProperty Name="provider_id" ColumnName="provider_id" />
+          <ScalarProperty Name="provider_name" ColumnName="provider_name" />
+          <ScalarProperty Name="provider_website" ColumnName="provider_website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CoursesCourse_Provider" TypeName="CourseProviderModel.CoursesCourse_Provider" StoreEntitySet="CoursesSet">
+      <EndProperty Name="Course_Provider">
+        <ScalarProperty Name="provider_id" ColumnName="Course_Provider_provider_id" />
+      </EndProperty>
+      <EndProperty Name="Courses">
+        <ScalarProperty Name="course_id" ColumnName="course_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -60,6 +135,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

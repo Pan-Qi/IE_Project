@@ -7,6 +7,7 @@
       <Diagram DiagramId="d216bec7677e40cc89bf3ddb44df9277" Name="Diagram1" ZoomLevel="150" >
         <EntityTypeShape EntityType="CourseProviderModel.Courses" Width="1.5" PointX="0.625" PointY="1.375" />
         <EntityTypeShape EntityType="CourseProviderModel.Course_Provider" Width="1.5" PointX="0.625" PointY="4.5" />
+        <AssociationConnector Association="CourseProviderModel.CoursesCourse_Provider" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
