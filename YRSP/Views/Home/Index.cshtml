@@ -38,7 +38,7 @@
                 <div class="tile-background" id="Education">
                     <div class="tile-content">
                         <h4><a href="####" data-toggle="modal" data-target="#myModal">Education support</a></h4>
-                        <p>Find English learning resources & courses.</p>
+                        <p>Find learning resources & courses.</p>
                     </div>
                 </div>
             </div>
@@ -69,20 +69,22 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4 service-tile">
                 <div class="tile-background" id="Event">
                     <div class="tile-content">
                         <h4><a href="@Url.Action("Event","Users")">Social Events</a></h4>
-                        <p>Participate in upcoming refugee social events.</p>
+                        <p>Participate in refugee social events.</p>
                     </div>
                 </div>
             </div>
+        </div>
             <div class="row" style="margin-left: 0; margin-right: 0;">
                 <div class="col-sm-4 service-tile">
                     <div class="tile-background" id="Volunteer">
                         <div class="tile-content">
                             <h4><a href="@Url.Action("Volunteer","Home")">Become a Volunteer</a></h4>
-                            <p>Want to help refugees in Victoria. Learn more!</p>
+                            <p>Want to help refugees in Victoria.</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +92,7 @@
                     <div class="tile-background img-responsive" id="Life">
                         <div class="tile-content">
                             <h4><a href="@Url.Action("Lives","Home")">Life in Victoria</a></h4>
-                            <p>Want to help refugees in Victoria. Join us!</p>
+                            <p>Want to help refugees in Victoria.</p>
                         </div>
                     </div>
                 </div>
@@ -98,34 +100,20 @@
                     <div class="tile-background" id="Rights">
                         <div class="tile-content">
                             <h4><a href="@Url.Action("Rights","Home")">Know your rights</a></h4>
-                            <p> Get to know refugee rights in Australia.</p>
+                            <p>Know refugee rights in Australia.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
 </div>
-<div class="container">
-    <style>
 
-        div#mainPageViz {
-            margin-left: auto;
-            margin-right: auto;
-            width: 600px;
-            height: 400px
-        }
-    </style>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    @*<script type="text/javascript" src="mainPageViz.js"></script>*@
-    @Scripts.Render("~/bundles/indexVisual")
-    <div id="mainPageViz"></div>
-    <p style="text-align:center">There were a total of 16,250 refugee and humanitarian visas granted in 2017-18 as per the data from <a href="https://data.gov.au/data/dataset/dba45e7c-81f4-44aa-9d82-1b9a0a121017" target="_blank"> Department of Home Affairs</a>.<br> Want to know more facts and statistics about refugees and asylum seekers in Australia? <a href="/Home/Population">Learn More</a></p>
-</div>
+<!--Team members section-->
 @Scripts.Render("~/bundles/flipster")
-<div class="testimonial">
+<div class="testimonial" style="padding-bottom:100px;">
     <div class="container">
-        <h3 class="w3l-title"><span>T</span>estimonials</h3>
+        <h3 class="w3l-title"><span>T</span>eam <span>M</span>embers</h3>
         <div class="flipster">
             <ul>
                 <li>
@@ -134,13 +122,11 @@
 
                         </div>
                         <div class="agile-testi-bottom">
-                            <img src="https://via.placeholder.com/75" alt="" />
-                            <h4>Qi Pan</h4>
-                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <img src="~/Images/tou.jpg" style="height:75px; width:75px;">
+                            <h4>Qi(MIT)</h4>
+                            @*<h6>Donec libero dui, scelerisque ac augue</h6>*@
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
-                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
-                                tellus
+                                Back end design, server application, Interface design, Data analysis.
                             </p>
                         </div>
                     </div>
@@ -151,13 +137,11 @@
 
                         </div>
                         <div class="agile-testi-bottom">
-                            <img src="https://via.placeholder.com/75" alt="" />
-                            <h4>Yun Lou</h4>
-                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <img src="~/Images/tou.jpg" style="height:75px; width:75px;">
+                            <h4>Yun(MBIS)</h4>
+                            @*<h6>Donec libero dui, scelerisque ac augue</h6>*@
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
-                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
-                                tellus
+                                Defining the problems and providing corresponding solutions for the whole project, documentation.
                             </p>
                         </div>
                     </div>
@@ -168,13 +152,11 @@
 
                         </div>
                         <div class="agile-testi-bottom">
-                            <img src="https://via.placeholder.com/75" alt="" />
-                            <h4>Sakshi </h4>
-                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <img src="~/Images/tou.jpg" style="height:75px; width:75px;">
+                            <h4>Sakshi(MBIS)</h4>
+                            @*<h6>Donec libero dui, scelerisque ac augue</h6>*@
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
-                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
-                                tellus
+                                Defining a solution that would match the requirements of the user.
                             </p>
                         </div>
                     </div>
@@ -185,13 +167,11 @@
 
                         </div>
                         <div class="agile-testi-bottom">
-                            <img src="https://via.placeholder.com/75" alt="" />
-                            <h4>Laura Carl</h4>
-                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <img src="~/Images/tou.jpg" style="height:75px; width:75px;">
+                            <h4>Yichen(MIT)</h4>
+                            @*<h6>Donec libero dui, scelerisque ac augue</h6>*@
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
-                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
-                                tellus
+                                Designing website according to agreed solution, coordinate business-oriented requirement with technique part.
                             </p>
                         </div>
                     </div>
@@ -202,13 +182,11 @@
 
                         </div>
                         <div class="agile-testi-bottom">
-                            <img src="https://via.placeholder.com/75" alt="" />
-                            <h4>Ullam Firose</h4>
-                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <img src="~/Images/tou.jpg" style="height:75px; width:75px;">
+                            <h4>Sahil(MDS)</h4>
+                            @*<h6>Donec libero dui, scelerisque ac augue</h6>*@
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed
-                                velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus
-                                tellus
+                                Gather data required for the project, do any data analysis/visualization required for the project, ideation for the project, documentation of the project.
                             </p>
                         </div>
                     </div>

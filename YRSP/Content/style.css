@@ -2334,13 +2334,13 @@ div.transbox {
 }
 
 .agile-testi-top {
-    background: url(https://via.placeholder.com/150) no-repeat center;
+    background: url('../Images/team.jpg')no-repeat center;
     min-height: 150px;
     background-size: cover;
 }
 
     .agile-testi-top.agile-testi-top1 {
-        background: url(https://via.placeholder.com/150) no-repeat center;
+        background: url('../Images/team.jpg')no-repeat center;
         background-size: cover;
     }
 

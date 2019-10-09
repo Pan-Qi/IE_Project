@@ -272,6 +272,8 @@
     <Content Include="Images\skill3.png" />
     <Content Include="Images\skill_bc.png" />
     <Content Include="Images\systemic-evaluation.jpg" />
+    <Content Include="Images\team.jpg" />
+    <Content Include="Images\tou.jpg" />
     <Content Include="Images\v1.jpg" />
     <Content Include="Images\v2.jpg" />
     <Content Include="Images\v3.jpg" />
