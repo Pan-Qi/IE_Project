@@ -39,7 +39,7 @@ namespace YRSP.Controllers
         //}
 
         // GET: Users/Create
-        public ActionResult Create()
+        public ActionResult Event()
         {
             return View();
         }
@@ -49,14 +49,14 @@ namespace YRSP.Controllers
         // 详细信息，请参阅 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "user_id,user_email,user_first_name,user_last_name,user_address,user_phone_number")] User user)
+        public ActionResult Event([Bind(Include = "user_id,user_email,user_first_name,user_last_name,user_address,user_phone_number")] User user)
         {
             if (ModelState.IsValid)
             {
                 db.UserSet.Add(user);
                 db.SaveChanges();
                 MailSender(user.user_email, "noreply@yrsp.ml","Notification from YRSP" , "Hi, " + user.user_first_name + ". You have successfully subscribed to our event notification.");
-                return RedirectToAction("Create");
+                return RedirectToAction("Event");
             }
 
             return View(user);
