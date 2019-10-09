@@ -2421,3 +2421,23 @@ div.transbox {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #large-screen {
+        display: none;
+    }
+
+    #small-screen {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #large-screen {
+        display: block;
+    }
+
+    #small-screen {
+        display: none;
+    }
+}
