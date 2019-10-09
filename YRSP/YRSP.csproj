@@ -228,6 +228,12 @@
     <Content Include="Images\Find_school.jpg" />
     <Content Include="Images\fj_bac.jpg" />
     <Content Include="Images\health.jpg" />
+    <Content Include="Images\heducation.jpg" />
+    <Content Include="Images\hevent.jpg" />
+    <Content Include="Images\hlife.jpg" />
+    <Content Include="Images\hright.jpg" />
+    <Content Include="Images\hvolunteer.jpg" />
+    <Content Include="Images\hwork.jpg" />
     <Content Include="Images\jobse.png" />
     <Content Include="Images\jobse2.png" />
     <Content Include="Images\job_process.png" />
