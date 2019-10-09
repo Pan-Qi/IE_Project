@@ -317,6 +317,7 @@
     <Content Include="Scripts\Visualisation\populationChart.js" />
     <Content Include="Scripts\Visualisation\schoolVisualization.js" />
     <Content Include="Static\events.js" />
+    <Content Include="Scripts\mainPageViz.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -369,7 +370,7 @@
     <Content Include="Views\Home\Culture.cshtml" />
     <Content Include="Views\Home\Weather.cshtml" />
     <Content Include="Views\Home\Settle.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Event.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />

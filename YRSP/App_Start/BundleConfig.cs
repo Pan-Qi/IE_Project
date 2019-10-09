@@ -29,6 +29,10 @@ namespace YRSP
            "~/Scripts/Visualisation/populationChart.js"
            ));
 
+            bundles.Add(new ScriptBundle("~/bundles/indexVisual").Include(
+                "~/Scripts/mainPageViz.js"
+                ));
+              
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                 "~/Scripts/bootstrap.js",

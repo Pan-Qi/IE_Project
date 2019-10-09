@@ -110,3 +110,19 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <style>
+        div#mainPageViz {
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+            height: 400px
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    @*<script type="text/javascript" src="mainPageViz.js"></script>*@
+    @Scripts.Render("~/bundles/indexVisual")
+    <div id="mainPageViz"></div>
+    <p style="text-align:center">There were a total of 16,250 refugee and humanitarian visas granted in 2017-18 as per the data from <a href="https://data.gov.au/data/dataset/dba45e7c-81f4-44aa-9d82-1b9a0a121017" target="_blank"> Department of Home Affairs</a>.<br> Want to know more facts and statistics about refugees and asylum seekers in Australia? <a href="/Home/Population">Learn More</a></p>
+</div>
