@@ -94,5 +94,10 @@ namespace YRSP.Controllers
         {
             return View();
         }
+
+        public ActionResult population2()
+        {
+            return View();
+        }
     }
 }

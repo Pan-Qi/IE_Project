@@ -190,6 +190,8 @@
     <Content Include="Images\lives7.jpg" />
     <Content Include="Images\living.jpg" />
     <Content Include="Images\Lou.jpg" />
+    <Content Include="Images\mai.jpg" />
+    <Content Include="Images\mai3.jpg" />
     <Content Include="Images\main1.jpg" />
     <Content Include="Images\Pan.jpg" />
     <Content Include="Images\perry-grone-lbLgFFlADrY-unsplash.jpg" />
@@ -235,6 +237,8 @@
     <Content Include="Scripts\fullcalendar\core\main.min.js" />
     <Content Include="Scripts\fullcalendar\daygrid\main.min.js" />
     <Content Include="Scripts\fullcalendar\list\main.min.js" />
+    <Content Include="Scripts\Visualisation\humanitarianVisasAge.js" />
+    <Content Include="Scripts\Visualisation\humanitarianVisasNumber.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.flipster.js" />
     <Content Include="Scripts\jquery\jquery.min.js" />
@@ -273,7 +277,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Static\population.csv" />
-    <Content Include="Views\Home\Population.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
     <None Include="Properties\PublishProfiles\PQmengkang - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\yrsp - Web Deploy.pubxml" />
@@ -292,6 +295,9 @@
     <Content Include="Views\Home\Culture.cshtml" />
     <Content Include="Views\Home\Weather.cshtml" />
     <Content Include="Views\Home\Settle.cshtml" />
+    <Content Include="Views\Home\Population.cshtml" />
+    <Content Include="Static\humanitarianVisasAge.csv" />
+    <Content Include="Static\humanitarianVisasNum.csv" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
