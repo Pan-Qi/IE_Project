@@ -154,10 +154,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CourseProviderModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseProviderModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CourseProviderModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseProviderModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CourseProviderModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseProviderModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Courses.cs">
+      <DependentUpon>CourseProviderModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Course_Provider.cs">
+      <DependentUpon>CourseProviderModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EmailSender.cs" />
     <Compile Include="Models\User.cs">
@@ -287,6 +303,17 @@
     <Content Include="Images\working2.jpg" />
     <Content Include="Images\workright2.jpg" />
     <Content Include="Images\youth.jpg" />
+    <Content Include="Models\CourseProviderModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CourseProviderModel.Context.cs</LastGenOutput>
+      <DependentUpon>CourseProviderModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\CourseProviderModel.edmx.sql" />
+    <Content Include="Models\CourseProviderModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CourseProviderModel.cs</LastGenOutput>
+      <DependentUpon>CourseProviderModel.edmx</DependentUpon>
+    </Content>
     <Content Include="Models\UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UserModel.Context.cs</LastGenOutput>
