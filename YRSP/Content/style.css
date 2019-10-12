@@ -2307,7 +2307,7 @@ div.transbox {
     text-align: center;
     margin: 20px;
     color: #4c4c4c !important;
-    background-color: #FFFFFFCC;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: background-color 0.5s, font 1s;
 }
 

@@ -273,6 +273,7 @@
                             ${school.Address_Town ? school.Address_Town + ', ' : ''}
                             ${school.Address_State ? school.Address_State + ', ' : ''}
                             ${school.Address_Postcode ? school.Address_Postcode + ', ' : ''}
+                            ${school.Full_Phone_No ? '<br>tel: ' + school.Full_Phone_No : ''}
                             </p>`);
             marker.setLngLat([school.X, school.Y])
                 .setPopup(popup)
